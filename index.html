@@ -1,0 +1,3291 @@
+<!DOCTYPE html>
+<html lang="vi" prefix="og: https://ogp.me/ns#">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EduQuiz – 350 Câu Hỏi Kinh Tế Vi Mô</title>
+    <meta name="description" content="Bộ 350 câu hỏi trắc nghiệm Kinh tế vi mô tiếng Anh kèm giải thích tiếng Việt. 7 bộ đề, chế độ học và thi." />
+    <meta name="theme-color" content="#1e3a8a" />
+    <link rel="canonical" href="https://eduquiz.vn/kinh-te-vi-mo" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,400;0,14..32,500;0,14..32,600;0,14..32,700;0,14..32,800;1,14..32,400&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet" />
+
+    <style>
+        /* ===== DESIGN TOKENS ===== */
+        :root {
+            --ink-900: #0f172a;
+            --ink-700: #334155;
+            --ink-500: #64748b;
+            --ink-300: #cbd5e1;
+            --ink-100: #f1f5f9;
+            --ink-50: #f8fafc;
+            --blue-700: #1d4ed8;
+            --blue-600: #2563eb;
+            --blue-500: #3b82f6;
+            --blue-100: #dbeafe;
+            --blue-50: #eff6ff;
+            --green-600: #16a34a;
+            --green-500: #22c55e;
+            --green-50: #f0fdf4;
+            --red-600: #dc2626;
+            --red-50: #fef2f2;
+            --amber-500: #f59e0b;
+            --amber-100: #fef3c7;
+            --radius-sm: 8px;
+            --radius-md: 16px;
+            --radius-lg: 24px;
+            --radius-xl: 36px;
+            --shadow-sm: 0 1px 3px rgba(15,23,42,.06), 0 1px 2px rgba(15,23,42,.04);
+            --shadow-md: 0 4px 16px rgba(15,23,42,.08), 0 2px 6px rgba(15,23,42,.04);
+            --shadow-lg: 0 20px 60px rgba(15,23,42,.10), 0 8px 24px rgba(15,23,42,.06);
+            --shadow-xl: 0 30px 80px rgba(15,23,42,.18), 0 12px 40px rgba(15,23,42,.10);
+            --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+            --font-mono: 'JetBrains Mono', 'Courier New', monospace;
+            --transition: 250ms cubic-bezier(.4,0,.2,1);
+        }
+
+        /* ===== RESET & BASE ===== */
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+        body {
+            font-family: var(--font-sans);
+            background: var(--ink-50);
+            color: var(--ink-900);
+            min-height: 100dvh;
+            display: flex;
+            flex-direction: column;
+            -webkit-font-smoothing: antialiased;
+            line-height: 1.6;
+        }
+        .skip-link {
+            position: absolute;
+            top: -40px;
+            left: 16px;
+            background: var(--blue-600);
+            color: #fff;
+            padding: 8px 16px;
+            border-radius: var(--radius-sm);
+            font-weight: 600;
+            font-size: 14px;
+            z-index: 9999;
+            text-decoration: none;
+            transition: top var(--transition);
+        }
+        .skip-link:focus {
+            top: 12px;
+        }
+
+        /* ===== SITE HEADER ===== */
+        .site-header {
+            background: rgba(255,255,255,.88);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--ink-100);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            padding: 0 24px;
+        }
+        .site-header__inner {
+            max-width: 1000px;
+            margin: 0 auto;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 16px;
+        }
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+        }
+        .logo__icon {
+            width: 34px;
+            height: 34px;
+            background: var(--blue-600);
+            border-radius: var(--radius-sm);
+            display: grid;
+            place-items: center;
+            font-size: 17px;
+            flex-shrink: 0;
+        }
+        .logo__text {
+            font-size: 18px;
+            font-weight: 800;
+            color: var(--ink-900);
+            letter-spacing: -0.4px;
+        }
+        .logo__text em {
+            color: var(--blue-600);
+            font-style: normal;
+        }
+
+        nav[aria-label="breadcrumb"] {
+            display: none;
+        }
+        @media (min-width: 600px) {
+            nav[aria-label="breadcrumb"] {
+                display: block;
+            }
+        }
+        .breadcrumb {
+            list-style: none;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 13px;
+            color: var(--ink-500);
+        }
+        .breadcrumb li+li::before {
+            content: '/';
+            color: var(--ink-300);
+            margin-right: 6px;
+        }
+        .breadcrumb a {
+            color: var(--ink-500);
+            text-decoration: none;
+        }
+        .breadcrumb a:hover {
+            color: var(--blue-600);
+        }
+        .breadcrumb [aria-current="page"] {
+            color: var(--ink-700);
+            font-weight: 600;
+        }
+
+        .mode-toggle {
+            display: flex;
+            gap: 4px;
+            background: var(--ink-100);
+            border-radius: 40px;
+            padding: 3px;
+        }
+        .mode-btn {
+            border: none;
+            background: transparent;
+            padding: 8px 20px;
+            border-radius: 32px;
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--ink-500);
+            cursor: pointer;
+            transition: all var(--transition);
+            font-family: var(--font-sans);
+            line-height: 1;
+        }
+        .mode-btn.active {
+            background: #fff;
+            color: var(--ink-900);
+            box-shadow: var(--shadow-sm);
+        }
+        .mode-btn:hover:not(.active) {
+            color: var(--ink-900);
+        }
+        .mode-btn:focus-visible {
+            outline: 2px solid var(--blue-600);
+            outline-offset: 2px;
+        }
+
+        /* ===== MAIN LAYOUT ===== */
+        .main-wrap {
+            flex: 1;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 28px 20px 60px;
+            width: 100%;
+        }
+        .page-heading {
+            margin-bottom: 24px;
+        }
+        .page-heading h1 {
+            font-size: 22px;
+            font-weight: 700;
+            color: var(--ink-900);
+            letter-spacing: -0.4px;
+            line-height: 1.3;
+        }
+        .page-heading p {
+            font-size: 14px;
+            color: var(--ink-500);
+            margin-top: 4px;
+        }
+
+        .set-section {
+            margin-bottom: 20px;
+        }
+        .set-section__label {
+            font-size: 12px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: var(--ink-500);
+            margin-bottom: 10px;
+        }
+        .set-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+        .set-btn {
+            padding: 7px 16px;
+            border-radius: 40px;
+            border: 1.5px solid var(--ink-200, #e2e8f0);
+            background: #fff;
+            font-weight: 600;
+            font-size: 13px;
+            color: var(--ink-500);
+            cursor: pointer;
+            transition: all var(--transition);
+            font-family: var(--font-sans);
+            line-height: 1;
+        }
+        .set-btn.active {
+            border-color: var(--blue-600);
+            background: var(--blue-50);
+            color: var(--blue-700);
+        }
+        .set-btn:hover:not(.active) {
+            border-color: var(--blue-600);
+            color: var(--blue-600);
+        }
+        .set-btn:focus-visible {
+            outline: 2px solid var(--blue-600);
+            outline-offset: 2px;
+        }
+
+        .quiz-card {
+            background: #fff;
+            border-radius: var(--radius-xl);
+            box-shadow: var(--shadow-md);
+            padding: 32px;
+            border: 1px solid rgba(15,23,42,.04);
+        }
+        @media (max-width: 600px) {
+            .quiz-card {
+                padding: 20px 18px;
+                border-radius: var(--radius-lg);
+            }
+        }
+
+        .status-bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+        .progress-wrap {
+            flex: 1;
+            min-width: 0;
+        }
+        .progress-label {
+            font-size: 13px;
+            font-weight: 600;
+            color: var(--ink-700);
+            margin-bottom: 6px;
+            display: flex;
+            justify-content: space-between;
+        }
+        .progress-track {
+            height: 4px;
+            background: var(--ink-100);
+            border-radius: 99px;
+            overflow: hidden;
+        }
+        .progress-fill {
+            height: 100%;
+            background: var(--blue-600);
+            border-radius: 99px;
+            transition: width 0.35s cubic-bezier(.4,0,.2,1);
+        }
+        .timer-badge {
+            font-family: var(--font-mono);
+            font-size: 14px;
+            font-weight: 600;
+            background: var(--ink-100);
+            padding: 6px 16px;
+            border-radius: 40px;
+            color: var(--ink-700);
+            flex-shrink: 0;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+        .timer-badge.warning {
+            background: var(--red-50);
+            color: var(--red-600);
+        }
+        .timer-badge.paused {
+            background: var(--amber-100);
+            color: #854d0e;
+        }
+        .timer-dot {
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: currentColor;
+            animation: pulse-dot 1s infinite;
+        }
+        .timer-badge.paused .timer-dot,
+        .timer-badge.warning .timer-dot {
+            animation: none;
+            background: transparent;
+        }
+        @keyframes pulse-dot {
+            0%,100% { opacity: 1; }
+            50% { opacity: 0.3; }
+        }
+
+        .question-meta {
+            font-size: 12px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: var(--blue-600);
+            margin-bottom: 10px;
+        }
+        .question-text {
+            font-size: 19px;
+            font-weight: 600;
+            line-height: 1.45;
+            color: var(--ink-900);
+            margin-bottom: 22px;
+            letter-spacing: -0.2px;
+        }
+        @media (max-width: 600px) {
+            .question-text {
+                font-size: 17px;
+            }
+        }
+
+        .options {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        .option {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            background: var(--ink-50);
+            border-radius: var(--radius-md);
+            padding: 14px 18px;
+            border: 1.5px solid transparent;
+            cursor: pointer;
+            transition: all var(--transition);
+            font-size: 15px;
+            color: var(--ink-700);
+            position: relative;
+            text-align: left;
+            width: 100%;
+            font-family: var(--font-sans);
+            line-height: 1.5;
+        }
+        .option:hover:not(.disabled) {
+            background: var(--blue-50);
+            border-color: var(--blue-100);
+            color: var(--ink-900);
+        }
+        .option:focus-visible {
+            outline: 2px solid var(--blue-600);
+            outline-offset: 2px;
+        }
+        .option.selected {
+            border-color: var(--blue-600);
+            background: var(--blue-50);
+            color: var(--ink-900);
+        }
+        .option.correct {
+            border-color: var(--green-500);
+            background: var(--green-50);
+            color: var(--ink-900);
+        }
+        .option.wrong {
+            border-color: var(--red-600);
+            background: var(--red-50);
+            color: var(--ink-900);
+        }
+        .option.disabled {
+            pointer-events: none;
+        }
+        .option__letter {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background: rgba(15,23,42,.06);
+            display: grid;
+            place-items: center;
+            font-weight: 700;
+            font-size: 13px;
+            color: var(--ink-500);
+            flex-shrink: 0;
+            transition: all var(--transition);
+        }
+        .option.multi .option__letter {
+            border-radius: 4px;
+        }
+        .option.selected .option__letter {
+            background: var(--blue-600);
+            color: #fff;
+        }
+        .option.correct .option__letter {
+            background: var(--green-500);
+            color: #fff;
+        }
+        .option.wrong .option__letter {
+            background: var(--red-600);
+            color: #fff;
+        }
+        .option__text {
+            flex: 1;
+        }
+        .option__icon {
+            font-size: 16px;
+            opacity: 0;
+            transition: opacity var(--transition);
+            margin-left: auto;
+            padding-left: 8px;
+        }
+        .option.selected .option__icon,
+        .option.correct .option__icon,
+        .option.wrong .option__icon {
+            opacity: 1;
+        }
+
+        .explanation {
+            margin-top: 20px;
+            padding: 16px 20px;
+            background: var(--blue-50);
+            border-radius: var(--radius-md);
+            border-left: 4px solid var(--blue-600);
+            font-size: 14px;
+            color: var(--ink-700);
+            line-height: 1.7;
+            display: none;
+        }
+        .explanation.show {
+            display: block;
+            animation: fade-up .25s ease;
+        }
+        @keyframes fade-up {
+            from { opacity:0; transform:translateY(6px); }
+            to { opacity:1; transform:translateY(0); }
+        }
+        .explanation strong {
+            color: var(--blue-700);
+        }
+
+        .quiz-nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 12px;
+            margin-top: 28px;
+            flex-wrap: wrap;
+        }
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 12px 28px;
+            border-radius: 40px;
+            border: none;
+            font-family: var(--font-sans);
+            font-weight: 600;
+            font-size: 14px;
+            cursor: pointer;
+            transition: all var(--transition);
+            line-height: 1;
+            text-decoration: none;
+        }
+        .btn:focus-visible {
+            outline: 2px solid var(--blue-600);
+            outline-offset: 2px;
+        }
+        .btn--ghost {
+            background: var(--ink-100);
+            color: var(--ink-700);
+        }
+        .btn--ghost:hover:not(:disabled) {
+            background: var(--ink-200, #e2e8f0);
+        }
+        .btn--primary {
+            background: var(--blue-600);
+            color: #fff;
+            box-shadow: 0 4px 12px rgba(37,99,235,.25);
+        }
+        .btn--primary:hover:not(:disabled) {
+            background: var(--blue-700);
+            box-shadow: 0 6px 16px rgba(37,99,235,.35);
+            transform: translateY(-1px);
+        }
+        .btn--success {
+            background: var(--green-500);
+            color: #fff;
+            box-shadow: 0 4px 12px rgba(34,197,94,.25);
+        }
+        .btn--success:hover:not(:disabled) {
+            background: var(--green-600);
+        }
+        .btn:disabled {
+            opacity: 0.35;
+            cursor: not-allowed;
+            transform: none !important;
+        }
+        .btn:active:not(:disabled) {
+            transform: scale(.97);
+        }
+
+        .result-box {
+            margin-top: 28px;
+            padding: 32px;
+            background: linear-gradient(135deg, var(--blue-50) 0%, #fff 100%);
+            border-radius: var(--radius-xl);
+            text-align: center;
+            display: none;
+            border: 1px solid var(--blue-100);
+        }
+        .result-box.show {
+            display: block;
+            animation: fade-up .35s ease;
+        }
+        .result-score {
+            font-size: 52px;
+            font-weight: 800;
+            letter-spacing: -2px;
+            color: var(--ink-900);
+            line-height: 1;
+        }
+        .result-score span {
+            font-size: 24px;
+            font-weight: 500;
+            color: var(--ink-500);
+        }
+        .result-stars {
+            font-size: 28px;
+            letter-spacing: 4px;
+            margin: 12px 0;
+        }
+        .result-detail {
+            font-size: 15px;
+            color: var(--ink-500);
+        }
+        .result-detail strong {
+            color: var(--ink-900);
+        }
+        .result-actions {
+            display: flex;
+            gap: 12px;
+            justify-content: center;
+            margin-top: 20px;
+            flex-wrap: wrap;
+        }
+
+        .keyboard-hint {
+            text-align: center;
+            font-size: 12px;
+            color: var(--ink-400, #94a3b8);
+            margin-top: 16px;
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+        .key {
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+            background: var(--ink-100);
+            border-radius: 4px;
+            padding: 2px 8px;
+            font-family: var(--font-mono);
+            font-size: 11px;
+            font-weight: 600;
+            color: var(--ink-500);
+        }
+
+        footer {
+            background: #fff;
+            border-top: 1px solid var(--ink-100);
+            padding: 20px 24px;
+            text-align: center;
+            font-size: 13px;
+            color: var(--ink-400, #94a3b8);
+        }
+        footer a {
+            color: var(--blue-600);
+            text-decoration: none;
+        }
+
+        @media (max-width: 600px) {
+            .main-wrap { padding: 16px 12px 48px; }
+            .quiz-nav { gap: 8px; }
+            .btn { padding: 11px 20px; font-size: 13px; }
+            .result-score { font-size: 40px; }
+            .keyboard-hint { display: none; }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            *, *::before, *::after {
+                transition-duration: 0.01ms !important;
+                animation-duration: 0.01ms !important;
+            }
+        }
+
+        /* ===== CUSTOM CONFIRM MODAL ===== */
+        .modal-overlay {
+            position: fixed;
+            inset: 0;
+            background: rgba(15,23,42,0.55);
+            backdrop-filter: blur(12px) saturate(1.2);
+            -webkit-backdrop-filter: blur(12px) saturate(1.2);
+            z-index: 9999;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.35s cubic-bezier(.4,0,.2,1);
+            padding: 20px;
+        }
+        .modal-overlay.active {
+            opacity: 1;
+            visibility: visible;
+        }
+        .modal-box {
+            background: rgba(255,255,255,0.92);
+            backdrop-filter: blur(24px) saturate(1.4);
+            -webkit-backdrop-filter: blur(24px) saturate(1.4);
+            border-radius: 32px;
+            max-width: 460px;
+            width: 100%;
+            padding: 36px 32px 28px;
+            box-shadow: var(--shadow-xl), 0 0 0 1px rgba(255,255,255,0.5);
+            transform: scale(0.92) translateY(20px);
+            transition: all 0.4s cubic-bezier(.34,1.56,.64,1);
+            border: 1px solid rgba(255,255,255,0.3);
+            position: relative;
+            overflow: hidden;
+        }
+        .modal-box::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -30%;
+            width: 300px;
+            height: 300px;
+            background: radial-gradient(circle, rgba(37,99,235,0.08) 0%, transparent 70%);
+            border-radius: 50%;
+            pointer-events: none;
+        }
+        .modal-box::after {
+            content: '';
+            position: absolute;
+            bottom: -40%;
+            left: -20%;
+            width: 250px;
+            height: 250px;
+            background: radial-gradient(circle, rgba(34,197,94,0.06) 0%, transparent 70%);
+            border-radius: 50%;
+            pointer-events: none;
+        }
+        .modal-overlay.active .modal-box {
+            transform: scale(1) translateY(0);
+        }
+
+        .modal-icon {
+            width: 56px;
+            height: 56px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #fef3c7, #fde68a);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 28px;
+            margin: 0 auto 16px;
+            box-shadow: 0 8px 24px rgba(245,158,11,.25);
+            position: relative;
+            z-index: 1;
+        }
+        .modal-title {
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--ink-900);
+            text-align: center;
+            margin-bottom: 8px;
+            position: relative;
+            z-index: 1;
+            letter-spacing: -0.3px;
+        }
+        .modal-desc {
+            font-size: 15px;
+            color: var(--ink-500);
+            text-align: center;
+            line-height: 1.7;
+            margin-bottom: 24px;
+            position: relative;
+            z-index: 1;
+        }
+        .modal-desc strong {
+            color: var(--ink-700);
+            font-weight: 600;
+        }
+        .modal-actions {
+            display: flex;
+            gap: 12px;
+            justify-content: center;
+            position: relative;
+            z-index: 1;
+        }
+        .modal-btn {
+            padding: 12px 32px;
+            border-radius: 40px;
+            border: none;
+            font-family: var(--font-sans);
+            font-weight: 600;
+            font-size: 15px;
+            cursor: pointer;
+            transition: all var(--transition);
+            min-width: 120px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+        .modal-btn:focus-visible {
+            outline: 2px solid var(--blue-600);
+            outline-offset: 2px;
+        }
+        .modal-btn--cancel {
+            background: var(--ink-100);
+            color: var(--ink-700);
+        }
+        .modal-btn--cancel:hover {
+            background: var(--ink-200, #e2e8f0);
+            transform: translateY(-2px);
+        }
+        .modal-btn--confirm {
+            background: linear-gradient(135deg, #dc2626, #ef4444);
+            color: #fff;
+            box-shadow: 0 4px 16px rgba(239,68,68,.3);
+        }
+        .modal-btn--confirm:hover {
+            box-shadow: 0 8px 28px rgba(239,68,68,.4);
+            transform: translateY(-2px) scale(1.02);
+        }
+        .modal-btn--confirm:active {
+            transform: scale(0.96);
+        }
+        .modal-btn--success {
+            background: linear-gradient(135deg, var(--blue-600), var(--blue-500));
+            color: #fff;
+            box-shadow: 0 4px 16px rgba(37,99,235,.3);
+        }
+        .modal-btn--success:hover {
+            box-shadow: 0 8px 28px rgba(37,99,235,.4);
+            transform: translateY(-2px) scale(1.02);
+        }
+
+        .modal-box .glow-ring {
+            position: absolute;
+            inset: -2px;
+            border-radius: 34px;
+            padding: 2px;
+            background: conic-gradient(from 0deg, transparent, rgba(37,99,235,0.15), rgba(34,197,94,0.15), transparent);
+            -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+            -webkit-mask-composite: xor;
+            mask-composite: exclude;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        @media (max-width: 480px) {
+            .modal-box { padding: 28px 20px 24px; border-radius: 24px; }
+            .modal-title { font-size: 18px; }
+            .modal-desc { font-size: 14px; }
+            .modal-btn { padding: 10px 24px; font-size: 14px; min-width: 100px; }
+            .modal-actions { flex-direction: column; gap: 10px; }
+            .modal-btn { width: 100%; }
+        }
+    </style>
+</head>
+<body>
+
+    <a class="skip-link" href="#quiz-main">Bỏ qua điều hướng</a>
+
+    <header class="site-header" role="banner">
+        <div class="site-header__inner">
+            <a href="/" class="logo" aria-label="EduQuiz – Trang chủ">
+                <div class="logo__icon" aria-hidden="true">📚</div>
+                <span class="logo__text">Edu<em>Quiz</em></span>
+            </a>
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li><a href="/">Trang chủ</a></li>
+                    <li><a href="/khoa-hoc-kinh-te">Kinh tế</a></li>
+                    <li aria-current="page">Kinh Tế Vi Mô</li>
+                </ol>
+            </nav>
+            <div class="mode-toggle" role="group" aria-label="Chế độ làm bài">
+                <button class="mode-btn active" id="modeLearn" aria-pressed="true">📖 Học</button>
+                <button class="mode-btn" id="modeExam" aria-pressed="false">📝 Thi</button>
+            </div>
+        </div>
+    </header>
+
+    <main id="quiz-main" class="main-wrap" role="main">
+
+        <div class="page-heading">
+            <h1>350 Câu Hỏi Trắc Nghiệm Kinh Tế Vi Mô</h1>
+            <p>Tiếng Anh · Giải thích tiếng Việt · 7 bộ đề · Chế độ học &amp; thi</p>
+        </div>
+
+        <section class="set-section" aria-label="Chọn bộ đề">
+            <div class="set-section__label">Chọn bộ đề</div>
+            <div class="set-list" id="setList" role="list"></div>
+        </section>
+
+        <article class="quiz-card" aria-label="Câu hỏi trắc nghiệm">
+            <div class="status-bar">
+                <div class="progress-wrap">
+                    <div class="progress-label">
+                        <span id="counterLabel">Câu 1 / 50</span>
+                        <span id="answeredLabel" style="color:var(--ink-400,#94a3b8)">0 đã trả lời</span>
+                    </div>
+                    <div class="progress-track" role="progressbar" aria-valuemin="0" aria-valuemax="50" aria-valuenow="0" id="progressBar">
+                        <div class="progress-fill" id="progressFill" style="width:2%"></div>
+                    </div>
+                </div>
+                <div class="timer-badge" id="timerBadge" aria-live="polite" aria-label="Thời gian">
+                    <span class="timer-dot" aria-hidden="true"></span>
+                    <span id="timerText">--:--</span>
+                </div>
+            </div>
+
+            <div class="question-meta" id="questionMeta" aria-label="Chủ đề câu hỏi"></div>
+            <h2 class="question-text" id="questionText">Đang tải câu hỏi…</h2>
+
+            <div class="options" id="optionsContainer" role="list"></div>
+
+            <div class="explanation" id="explanationBox" role="alert" aria-live="polite"></div>
+
+            <nav class="quiz-nav" aria-label="Điều hướng câu hỏi">
+                <button class="btn btn--ghost" id="prevBtn" disabled aria-label="Câu trước">← Trước</button>
+                <button class="btn btn--primary" id="nextBtn" aria-label="Câu tiếp theo">Tiếp →</button>
+            </nav>
+
+            <div class="keyboard-hint" aria-hidden="true">
+                <span><span class="key">←</span><span class="key">→</span> điều hướng</span>
+                <span><span class="key">1</span><span class="key">2</span><span class="key">3</span><span class="key">4</span> chọn đáp án</span>
+            </div>
+        </article>
+
+        <aside class="result-box" id="resultBox" aria-live="assertive" aria-label="Kết quả bài thi">
+            <div class="result-stars" id="starsDisplay" aria-label="Xếp loại"></div>
+            <div class="result-score" id="scoreText">0<span>/50</span></div>
+            <p class="result-detail" id="detailText">Thời gian: <strong id="timeSpent">--</strong> · Đúng <strong id="correctCount">0</strong> câu</p>
+            <div class="result-actions">
+                <button class="btn btn--ghost" id="reviewBtn">🔍 Xem lại</button>
+                <button class="btn btn--primary" id="retryBtn">🔁 Làm lại</button>
+            </div>
+        </aside>
+    </main>
+
+    <footer role="contentinfo">
+        <p>© 2026 <a href="/">EduQuiz</a> · Nền tảng luyện tập kinh tế &amp; mạng máy tính miễn phí</p>
+    </footer>
+
+    <!-- ===== CUSTOM CONFIRM MODAL ===== -->
+    <div class="modal-overlay" id="customConfirm" role="dialog" aria-modal="true" aria-labelledby="confirmTitle">
+        <div class="modal-box">
+            <div class="glow-ring"></div>
+            <div class="modal-icon" id="confirmIcon">⚠️</div>
+            <h3 class="modal-title" id="confirmTitle">Xác nhận</h3>
+            <p class="modal-desc" id="confirmDesc">Bạn có chắc chắn muốn thực hiện hành động này?</p>
+            <div class="modal-actions">
+                <button class="modal-btn modal-btn--cancel" id="confirmCancel">Hủy</button>
+                <button class="modal-btn modal-btn--confirm" id="confirmOk">Tiếp tục</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // ================================================================
+        // CUSTOM CONFIRM – Trend 2026
+        // ================================================================
+        const confirmModal = {
+            overlay: document.getElementById('customConfirm'),
+            title: document.getElementById('confirmTitle'),
+            desc: document.getElementById('confirmDesc'),
+            icon: document.getElementById('confirmIcon'),
+            cancelBtn: document.getElementById('confirmCancel'),
+            okBtn: document.getElementById('confirmOk'),
+            _resolve: null,
+
+            show({ title, desc, icon = '⚠️', okText = 'Tiếp tục', cancelText = 'Hủy', type = 'danger' }) {
+                return new Promise((resolve) => {
+                    this.title.textContent = title || 'Xác nhận';
+                    this.desc.innerHTML = desc || 'Bạn có chắc chắn muốn thực hiện hành động này?';
+                    this.icon.textContent = icon;
+                    this.okBtn.textContent = okText;
+                    this.cancelBtn.textContent = cancelText;
+                    this.okBtn.className = 'modal-btn';
+                    if (type === 'danger') {
+                        this.okBtn.classList.add('modal-btn--confirm');
+                    } else {
+                        this.okBtn.classList.add('modal-btn--success');
+                    }
+                    this._resolve = resolve;
+                    this.overlay.classList.add('active');
+                    document.body.style.overflow = 'hidden';
+                });
+            },
+
+            hide(result) {
+                this.overlay.classList.remove('active');
+                document.body.style.overflow = '';
+                if (this._resolve) {
+                    this._resolve(result);
+                    this._resolve = null;
+                }
+            },
+
+            init() {
+                this.cancelBtn.addEventListener('click', () => this.hide(false));
+                this.okBtn.addEventListener('click', () => this.hide(true));
+                this.overlay.addEventListener('click', (e) => {
+                    if (e.target === this.overlay) this.hide(false);
+                });
+                document.addEventListener('keydown', (e) => {
+                    if (e.key === 'Escape' && this.overlay.classList.contains('active')) {
+                        this.hide(false);
+                    }
+                });
+            }
+        };
+        confirmModal.init();
+
+        // ================================================================
+        // TOPIC LABELS (chỉ dùng 1 topic cho toàn bộ)
+        // ================================================================
+        const TOPIC_LABELS = {
+            0: 'Kinh tế vi mô'
+        };
+
+        // ================================================================
+        // 7 BỘ ĐỀ (350 câu) – DỮ LIỆU TỪ FILE SUOCCUOI
+        // ================================================================
+
+        // Hàm tạo câu hỏi
+        const makeQ = (q, opts, ans, exp, multi = false) => ({
+            q,
+            opts,
+            ans: Array.isArray(ans) ? ans : [ans],
+            exp,
+            t: 0,
+            multi
+        });
+
+        // ===== BỘ ĐỀ 1 (50 câu) =====
+        const DE1 = [
+            makeQ("Which of the following statements is correct?", [
+                "Economists represent a consumer's preferences using demand curves.",
+                "Economists represent a consumer's preferences using budget constraints.",
+                "Economists represent a consumer's preferences using indifference curves.",
+                "Economists represent a consumer's preferences using supply curves."
+            ], 2, "Các nhà kinh tế biểu diễn sở thích của người tiêu dùng bằng đường bàng quan (indifference curves)."),
+            makeQ("Willie sells equipments for fishing in a competitive market. If his equipments sell for $100 each and the ATC per unit is $95 at the profit-maximizing output level, then in the long run", [
+                "more firms will enter the market",
+                "some firms will exit from the market",
+                "the equilibrium market price will rise",
+                "ATC will fall"
+            ], 0, "P (100) > ATC (95) → lợi nhuận dương → các hãng mới gia nhập."),
+            makeQ("When firms are price takers, it means that if a firm raises its price,", [
+                "buyers will buy elsewhere",
+                "buyers will pay the higher price in the short term",
+                "competitors will also raise their prices",
+                "firms in the sector will use their market power"
+            ], 0, "Sản phẩm đồng nhất, tăng giá → mất khách hàng."),
+            makeQ("CGV Cinema Theatre can increase its profits through price discrimination by charging a higher price to adults and a lower price to children if", [
+                "adults buy more popcorn than children",
+                "the cost of showing a movie to children is less than the cost of showing a movie to adults",
+                "it can exercise monopoly-pricing power",
+                "all of the above are correct"
+            ], 2, "Phân biệt giá đòi hỏi sức mạnh thị trường (monopoly power)."),
+            makeQ("Which of the following conditions is characteristic of a monopolistically competitive firm in short-run?", [
+                "P = AR",
+                "MR = MC",
+                "P > MC",
+                "All of the above are correct"
+            ], 3, "Trong cạnh tranh độc quyền ngắn hạn: P=AR, MR=MC, P>MC."),
+            makeQ("A firm in a monopolistically competitive market is similar to a monopoly because: (i) they both face downward-sloping demand curves; (ii) they both charge a price that exceeds MC; (iii) free entry and exit in the long-run", [
+                "(i) only",
+                "(ii) only",
+                "(i) and (ii) only",
+                "(i), (ii), and (iii) only"
+            ], 2, "Cả hai có đường cầu dốc xuống và P>MC, nhưng tự do gia nhập chỉ có ở cạnh tranh độc quyền."),
+            makeQ("Lisa is willing to pay $500 for a new suit, but she is able to buy the suit for $350. Her consumer surplus is", [
+                "$150",
+                "$300",
+                "$350",
+                "$500"
+            ], 0, "CS = WTP – Price = 500 – 350 = 150."),
+            makeQ("Which of the following statements is correct?", [
+                "Just as the theory of the competitive firm provides a more complete understanding of supply, the theory of consumer choice provides a more complete understanding of demand.",
+                "Just as the theory of the competitive firm provides a more complete understanding of supply, the theory for consumer choice provides a more complete understanding of profits.",
+                "Just as the theory of the competitive firm provides a more complete understanding of supply, the theory of consumer choice provides a more complete understanding of production possibility frontiers.",
+                "Just as the theory of the competitive firm provides a more complete understanding of supply, the theory of consumer choice provides a more complete understanding of wages."
+            ], 0, "Lý thuyết hãng cạnh tranh giúp hiểu về cung, lý thuyết người tiêu dùng giúp hiểu về cầu."),
+            makeQ("Product A are currently selling for $20 per unit, but the equilibrium price of product A is $13 per unit. Then,", [
+                "This creates a shortage of product to exist and the market price of that product to increase.",
+                "This creates a shortage of product to exist and the market price of that product to decrease.",
+                "This creates a surplus of product to exist and the market price of that product to increase.",
+                "This creates a surplus of product to exist and the market price of that product to decrease."
+            ], 3, "Giá hiện tại (20) > giá cân bằng (13) → dư thừa → giá giảm."),
+            makeQ("Which of the following is an example of a price floor?", [
+                "Rent control laws.",
+                "Minimum wage legislation.",
+                "Government-imposed tax cuts.",
+                "Subsidies for farmers."
+            ], 1, "Lương tối thiểu là giá sàn (price floor)."),
+            makeQ("Capital is paid according to the value of its marginal product", [
+                "only if earnings from capital are paid to households in the form of dividends",
+                "regardless of whether earnings from capital are paid to households in the form of dividends or whether those earnings are kept within firms as retained earnings",
+                "only if earnings from capital are kept within firms as retained earnings",
+                "None of the above is correct; unlike labor, capital is a factor of production for which earnings are unrelated to the value of marginal product"
+            ], 1, "Vốn được trả theo VMP, bất kể phân phối hay giữ lại."),
+            makeQ("As a monopolist increases the quantity of output it sells, the price consumers are willing to pay for the good", [
+                "is unaffected.",
+                "decreases.",
+                "increases.",
+                "There is not enough information given in answer the question."
+            ], 1, "Đường cầu dốc xuống, để bán thêm sản lượng phải giảm giá."),
+            makeQ("Which of the following is a characteristic of oligopoly or monopolistic competition, but not perfect competition?", [
+                "advertising and sales promotion",
+                "profit maximization according to the MR = MC rule",
+                "firms being price takers rather than price makers",
+                "horizontal demand and marginal revenue curves"
+            ], 0, "Quảng cáo là đặc điểm của thị trường có sản phẩm khác biệt hóa."),
+            makeQ("Bob purchases a book, and his consumer surplus is $3. If Bob is willing to pay $8 for the book, then the price of the book must be", [
+                "$3",
+                "$8",
+                "$5",
+                "$11"
+            ], 2, "Giá = WTP – CS = 8 – 3 = 5."),
+            makeQ("If the government were to impose a fine of $4,000 for each unit of air-pollution released by a fertilizer plant, the policy would be considered", [
+                "a subsidy",
+                "a regulation",
+                "a corrective tax",
+                "an application of the Coase theorem"
+            ], 2, "Đây là thuế điều chỉnh (Pigouvian tax) để nội hóa ngoại tác."),
+            makeQ("Assume that a college student purchases only Ramen noodles and textbooks. If Ramen noodles are an inferior good and textbooks are a normal good, then the substitution effect associated with a decrease in the price of a textbook, by itself, will result in", [
+                "a decrease in the consumption of textbooks and a decrease in the consumption of Ramen noodles",
+                "a decrease in the consumption of textbooks and an increase in the consumption of Ramen noodles",
+                "an increase in the consumption of textbooks and an increase in the consumption of Ramen noodles",
+                "an increase in the consumption of textbooks and a decrease in the consumption of Ramen noodles"
+            ], 3, "Giá sách giảm → thay thế mì Ramen bằng sách → tiêu dùng sách tăng, Ramen giảm."),
+            makeQ("What does a point inside the Production Possibilities Frontier (PPF) represent?", [
+                "Efficient production.",
+                "Inefficient use of resources.",
+                "An unattainable production level.",
+                "Maximum production capacity."
+            ], 1, "Điểm bên trong PPF thể hiện sử dụng nguồn lực không hiệu quả."),
+            makeQ("The principle that the cost of something is what you give up to get it is best described by which of the following concepts?", [
+                "Opportunity Cost",
+                "Marginal Change",
+                "Incentive",
+                "Efficiency"
+            ], 0, "Đây là định nghĩa của chi phí cơ hội (opportunity cost)."),
+            makeQ("Which of the following is an example of a normative economic statement?", [
+                "The government should provide universal healthcare.",
+                "The unemployment rate is currently at 5%.",
+                "Increasing the minimum wage will lead to job losses.",
+                "Inflation is expected to rise by 2% next year."
+            ], 0, "Mệnh đề chuẩn tắc (normative) chứa từ 'should' – mang tính chủ quan."),
+            makeQ("How do rational people make decisions?", [
+                "By randomly choosing an option",
+                "By comparing the marginal benefits and marginal costs of their actions",
+                "By only considering benefits",
+                "By avoiding trade-offs"
+            ], 1, "Người hợp lý so sánh lợi ích cận biên và chi phí cận biên."),
+            makeQ("Markets are usually a good way to organize economic activity because:", [
+                "Governments make all decisions",
+                "Prices guide the allocation of resources through the decisions of many buyers and sellers",
+                "There is no competition in markets",
+                "Prices are fixed by law"
+            ], 1, "Giá cả hướng dẫn phân bổ nguồn lực qua 'bàn tay vô hình'."),
+            makeQ("The government can sometimes improve market outcomes by:", [
+                "Ignoring externalities",
+                "Enforcing property rights and regulating externalities",
+                "Preventing trade",
+                "Fixing all prices"
+            ], 1, "Can thiệp khi có ngoại tác hoặc thiếu quyền sở hữu."),
+            makeQ("What does 'trade can make everyone better off' mean?", [
+                "Everyone loses in trade",
+                "Trade allows specialization and gains from comparative advantage",
+                "Trade reduces production possibilities",
+                "Trade leads to conflict only"
+            ], 1, "Thương mại cho phép chuyên môn hóa và lợi thế so sánh."),
+            makeQ("Economists use models primarily to:", [
+                "Predict economic outcomes and test theories",
+                "Provide entertainment",
+                "Make laws",
+                "Increase government control"
+            ], 0, "Mô hình dùng để dự đoán và kiểm định lý thuyết."),
+            makeQ("The Production Possibilities Frontier (PPF) illustrates:", [
+                "The maximum combinations of two goods that can be produced with available resources",
+                "The market demand for products",
+                "Government spending limits",
+                "Income distribution among households"
+            ], 0, "PPF thể hiện các kết hợp tối đa với nguồn lực sẵn có."),
+            makeQ("The law of demand states that, other things equal, when the price of a good rises, the quantity demanded of the good will:", [
+                "Increase",
+                "Decrease",
+                "Remain unchanged",
+                "Shift to the right"
+            ], 1, "Luật cầu: giá tăng → lượng cầu giảm."),
+            makeQ("What is the effect on the demand curve if there is an increase in consumer income, assuming the good is a normal good?", [
+                "The demand curve shifts to the right.",
+                "The demand curve shifts to the left.",
+                "There is a movement along the demand curve, but no shift.",
+                "The demand curve becomes vertical."
+            ], 0, "Thu nhập tăng → cầu hàng hóa thông thường tăng → đường cầu dịch phải."),
+            makeQ("Which of the following best explains a shortage in a market?", [
+                "Quantity supplied is greater than quantity demanded",
+                "Quantity demanded is greater than quantity supplied",
+                "Price is above equilibrium",
+                "Supply curve shifts to the right"
+            ], 1, "Thiếu hụt xảy ra khi Qd > Qs."),
+            makeQ("What is the market equilibrium?", [
+                "The point at which the quantity demanded equals the quantity supplied.",
+                "The point at which the quantity supplied exceeds the quantity demanded.",
+                "The point at which the quantity demanded exceeds the quantity supplied.",
+                "The price at which no buyer wants to purchase and no seller wants to sell."
+            ], 0, "Cân bằng thị trường: Qd = Qs."),
+            makeQ("When a tax is imposed on a good, what determines how the tax burden is shared between buyers and sellers?", [
+                "The relative elasticities of supply and demand.",
+                "The elasticity of supply only.",
+                "The elasticity of demand only.",
+                "The legal incidence of the tax."
+            ], 0, "Gánh nặng thuế được chia dựa trên độ co giãn tương đối của cung và cầu."),
+            makeQ("The burden of a tax is determined by:", [
+                "Who legally pays it",
+                "Relative elasticities of demand and supply",
+                "The government",
+                "The size of the tax"
+            ], 1, "Độ co giãn quyết định ai chịu thuế nhiều hơn."),
+            makeQ("The area below the demand curve and above the price measures:", [
+                "Producer surplus",
+                "Consumer surplus",
+                "Deadweight loss",
+                "Total revenue"
+            ], 1, "CS = diện tích dưới đường cầu, trên mức giá."),
+            makeQ("The height of the supply curve represents:", [
+                "The market price",
+                "The cost to the seller",
+                "The quantity demanded",
+                "Consumer surplus"
+            ], 1, "Chiều cao đường cung = chi phí của người bán."),
+            makeQ("Efficiency in a market is achieved when:", [
+                "Consumer surplus is maximized",
+                "Producer surplus is maximized",
+                "Total surplus is maximized",
+                "Government intervenes"
+            ], 2, "Hiệu quả đạt được khi tổng thặng dư tối đa."),
+            makeQ("If a tax is imposed on a market, total surplus:", [
+                "Remains unchanged",
+                "Increases",
+                "Decreases",
+                "May increase or decrease"
+            ], 2, "Thuế gây mất mát vô ích (deadweight loss) → tổng thặng dư giảm."),
+            makeQ("A firm's economic profit is calculated by:", [
+                "Subtracting explicit costs from total revenue",
+                "Subtracting explicit costs from accounting profit",
+                "Subtracting both explicit and implicit costs from total revenue",
+                "Adding implicit costs to total revenue"
+            ], 2, "Lợi nhuận kinh tế = TR – (chi phí hiện + chi phí ngầm)."),
+            makeQ("Fixed costs are:", [
+                "Costs that vary with the quantity of output produced",
+                "Costs that do not vary with the quantity of output produced",
+                "The same as variable costs",
+                "Always positive in the long run"
+            ], 1, "Chi phí cố định không thay đổi theo sản lượng."),
+            makeQ("What is a characteristic of a perfectly competitive market?", [
+                "Firms have significant market power",
+                "There are many buyers and sellers",
+                "Products are highly differentiated",
+                "There are significant barriers to entry"
+            ], 1, "Cạnh tranh hoàn hảo: nhiều người mua và bán."),
+            makeQ("Which of the following best describes the short-run supply curve for a perfectly competitive firm?", [
+                "The portion of the marginal cost curve above average variable cost",
+                "The portion of the marginal cost curve below average total cost",
+                "The average total cost curve",
+                "The demand curve"
+            ], 0, "Đường cung ngắn hạn là phần MC nằm trên AVC."),
+            makeQ("In the long run, a perfectly competitive firm will produce where:", [
+                "Price equals marginal cost and average total cost",
+                "Price is greater than marginal cost",
+                "Price is less than average total cost",
+                "Marginal revenue is zero"
+            ], 0, "Dài hạn: P = MC = ATC."),
+            makeQ("A monopoly is a market structure characterized by:", [
+                "Many firms selling identical products",
+                "A single firm that is the sole seller of a product without close substitutes",
+                "Few firms competing in the market",
+                "Firms that are price takers"
+            ], 1, "Độc quyền: một hãng duy nhất, sản phẩm không có sản phẩm thay thế gần."),
+            makeQ("A monopolist maximizes profit by producing the quantity where:", [
+                "Price equals marginal cost",
+                "Marginal revenue equals marginal cost",
+                "Average total cost is minimized",
+                "Price equals average total cost"
+            ], 1, "MR = MC là điều kiện tối đa hóa lợi nhuận cho hãng độc quyền."),
+            makeQ("Compared to a monopoly, monopolistic competition results in:", [
+                "More product variety but less market power",
+                "Less product variety and more market power",
+                "No difference in product variety",
+                "Perfectly elastic demand"
+            ], 0, "Cạnh tranh độc quyền có nhiều loại sản phẩm hơn nhưng ít sức mạnh thị trường hơn."),
+            makeQ("Which of the following is true in the short run for a firm in monopolistic competition?", [
+                "The firm can make positive, zero, or negative economic profits",
+                "The firm must break even",
+                "The firm always incurs losses",
+                "The firm cannot set price above marginal cost"
+            ], 0, "Ngắn hạn: có thể lãi, hòa vốn, hoặc lỗ."),
+            makeQ("Which of the following is a reason why firms advertise in monopolistic competition?", [
+                "To increase product differentiation",
+                "To decrease market power",
+                "To raise marginal cost",
+                "To reduce product variety"
+            ], 0, "Quảng cáo làm tăng khác biệt hóa sản phẩm."),
+            makeQ("An oligopoly market structure is characterized by:", [
+                "Many firms with no market power",
+                "A few firms that are interdependent",
+                "A single firm dominating the market",
+                "Perfect competition"
+            ], 1, "Độc quyền tập đoàn: ít hãng và phụ thuộc lẫn nhau."),
+            makeQ("Which of the following statements is not correct about monopoly?", [
+                "Monopolists charge higher prices than competitive firms",
+                "Monopolists produce larger quantities of output than competitive firms",
+                "Consumers may benefit from monopolies if the firms invest their higher profits into something that benefits society",
+                "All of the above are not correct"
+            ], 1, "Độc quyền sản xuất ít hơn, không nhiều hơn."),
+            makeQ("Hotels in Bùi Viên (Ho Chi Minh City) used to experience an average vacancy rate of about 20 percent (on an average night, 80% of the hotel rooms are full). This kind of excess capacity is of what kind of market?", [
+                "monopoly",
+                "perfect competition",
+                "monopolistic competition",
+                "oligopoly"
+            ], 2, "Công suất dư thừa là đặc trưng của cạnh tranh độc quyền."),
+            makeQ("Consumer surplus", [
+                "is the amount a buyer is willing to pay for a good minus the amount the buyer actually pays for it.",
+                "is the amount a buyer is willing to pay for a good minus the cost of producing the good.",
+                "is the number of consumers who are excluded from a market because of scarcity.",
+                "measures how much a seller values a good."
+            ], 0, "CS = WTP – Giá thực tế phải trả."),
+            makeQ("Which of the following statements is not correct?", [
+                "A gasoline tax is designed to correct traffic congestion problems.",
+                "A gasoline tax is designed to correct traffic accidents problems.",
+                "A gasoline tax is designed to correct air pollution problems.",
+                "A gasoline tax is designed to correct EPA regulations problems."
+            ], 3, "Thuế xăng không nhằm sửa quy định EPA."),
+            makeQ("Marginal revenue for a monopolist is:", [
+                "Equal to price",
+                "Greater than price",
+                "Less than price",
+                "Unrelated to price"
+            ], 2, "Đối với độc quyền, MR < P."),
+        ];
+
+        // ===== BỘ ĐỀ 2 (50 câu) =====
+        const DE2 = [
+            makeQ("When new firms decide to enter a competitive market, their entry will", [
+                "increase the product price",
+                "drive down profits of existing firms in the market",
+                "shift the market supply curve to the left",
+                "increase demand for the product"
+            ], 1, "Gia nhập làm tăng cung → lợi nhuận của hãng hiện tại giảm."),
+            makeQ("Which of the following would be most likely to have monopoly power?", [
+                "a large department store",
+                "an online bookstore",
+                "a gas station",
+                "a local electricity supplier"
+            ], 3, "Nhà cung cấp điện địa phương có độc quyền tự nhiên."),
+            makeQ("Which of the following statements is correct?", [
+                "Market failure is the inability of buyers to interact harmoniously with sellers in the market.",
+                "Market failure is the inability of a market to establish an equilibrium price.",
+                "Market failure is the inability of buyers to place a value on the good or service.",
+                "Market failure is the inability of some unregulated markets to allocate resources efficiently."
+            ], 3, "Thị trường thất bại khi không phân bổ hiệu quả."),
+            makeQ("Which of the following statements is correct?", [
+                "If an externality is present in a market, economic efficiency may be enhanced by increased competition.",
+                "If an externality is present in a market, economic efficiency may be enhanced by weakening property rights.",
+                "If an externality is present in a market, economic efficiency may be enhanced by better informed market participants.",
+                "If an externality is present in a market, economic efficiency may be enhanced by government intervention."
+            ], 3, "Ngoại tác có thể được cải thiện bằng can thiệp chính phủ."),
+            makeQ("Both the income and substitution effects encourage the consumer to purchase less of the good.", [
+                "When the price of a normal good increases.",
+                "When the price of a normal good decreases.",
+                "When the price of an inferior good decreases.",
+                "When the price of an inferior good increases."
+            ], 0, "Khi giá hàng hóa thông thường tăng, cả hai hiệu ứng đều khuyến khích giảm tiêu dùng."),
+            makeQ("What causes a shift in the supply curve?", [
+                "A change in the price of the good",
+                "Improved production technology.",
+                "A change in consumer preferences.",
+                "Increased competition among buyers"
+            ], 1, "Công nghệ cải tiến làm dịch chuyển đường cung."),
+            makeQ("An increase in supply is represented by a", [
+                "supply curve move along downward and to the left.",
+                "supply curve move along upward and to the right.",
+                "supply curve shift right.",
+                "supply curve shift left."
+            ], 2, "Tăng cung → đường cung dịch phải."),
+            makeQ("Minimum-wage laws dictate", [
+                "the exact wage that firms must pay workers",
+                "a 'ceiling wage' that firms may pay workers",
+                "both a lowest wage and a highest wage that firms may pay workers",
+                "a 'floor wage' that firms may pay workers"
+            ], 3, "Luật lương tối thiểu là giá sàn (floor wage)."),
+            makeQ("Suppose the government designates certain areas within a community to be 'wetlands,' making it illegal to build on the land. What happens to land not classified as 'wetlands' within the community? (i) The price of non-wetland land will rise. (ii) The marginal product of non-wetland land will fall. (iii) The marginal product of non-wetland land will rise.", [
+                "(i) and (ii) only",
+                "(ii) only",
+                "(i) and (iii) only",
+                "(iii) only"
+            ], 2, "Đất không phải đầm lầy trở nên khan hiếm hơn → giá tăng, MP tăng."),
+            makeQ("For a certain firm, the 250th unit of output that the firm produces has a marginal revenue of $20 and a marginal cost of $15. It follows that the", [
+                "production of the 250th unit of output increases the firm's profit by $5.",
+                "production of the 250th unit of output increases the firm's average total cost by $15.",
+                "firm's profit-maximizing level of output is less than 250 units.",
+                "production of the 249th unit of output must increase the firm's profit by less than $5."
+            ], 0, "MR – MC = 20 – 15 = 5 → lợi nhuận tăng 5."),
+            makeQ("Patent and copyright laws are major sources of", [
+                "natural monopolies.",
+                "government-created monopolies.",
+                "resource monopolies.",
+                "antitrust regulation."
+            ], 1, "Bằng sáng chế và bản quyền tạo ra độc quyền do chính phủ tạo ra."),
+            makeQ("Which of the following is not an argument made by critics of advertising?", [
+                "Advertising manipulates people's tastes.",
+                "Advertising impedes competition.",
+                "Advertising promotes economies of scale.",
+                "Advertising increases the perception of product differentiation."
+            ], 2, "Quảng cáo thúc đẩy kinh tế nhờ quy mô là lập luận ủng hộ, không phải phê phán."),
+            makeQ("What can cause market failure?", [
+                "Perfect competition",
+                "Externalities and market power",
+                "Government subsidies",
+                "Equal distribution of income."
+            ], 1, "Ngoại tác và sức mạnh thị trường là nguyên nhân thất bại thị trường."),
+            makeQ("Which of the following best describes why indifference curves cannot cross?", [
+                "If indifference curves cross, there are situations where individuals are indifferent between bundles where one bundle contains strictly more of both goods than the other bundle",
+                "If indifference curves cross, individuals are not necessarily consuming along their budget line",
+                "If indifference curves cross, the marginal rate of substitution can be both increasing and decreasing at a specific point",
+                "If indifference curves cross, the goods can be both substitutes and complements"
+            ], 0, "Đường bàng quan cắt nhau vi phạm tính bắc cầu và nhiều hơn được ưa thích hơn."),
+            makeQ("Which scenario illustrates an economic incentive?", [
+                "A tax cut encourages more consumer spending.",
+                "A natural disaster disrupts production",
+                "Workers voluntarily work overtime without compensation",
+                "Government regulations reduce business competition"
+            ], 0, "Giảm thuế khuyến khích chi tiêu – là động lực kinh tế."),
+            makeQ("What does the circular-flow diagram represent?", [
+                "The process of inflation control",
+                "The flow of goods, services, and resources between households and firms",
+                "A country's total production capacity.",
+                "Government spending patterns"
+            ], 1, "Sơ đồ dòng luân chuyển thể hiện dòng chảy giữa hộ gia đình và doanh nghiệp."),
+            makeQ("Which of the following best describes a positive economic statement?", [
+                "A statement that can be tested and validated by data",
+                "A statement that describes how the economy ought to work.",
+                "A statement that reflects an opinion about economic policies.",
+                "A statement that prescribes a course of action for policymakers."
+            ], 0, "Mệnh đề thực chứng có thể kiểm tra bằng dữ liệu."),
+            makeQ("The concept of opportunity cost is crucial in economic thinking because:", [
+                "It highlights the limited nature of resources and the necessity of making choices.",
+                "It is only relevant in situations involving monetary transactions",
+                "It suggests that the value of all alternatives is equal.",
+                "It is primarily concerned with the time value of money."
+            ], 0, "Chi phí cơ hội nhấn mạnh sự khan hiếm và cần lựa chọn."),
+            makeQ("In the circular-flow diagram, which two groups interact in the markets for goods and services?", [
+                "Households and firms",
+                "Firms and governments",
+                "Households and governments",
+                "Governments and foreign countries"
+            ], 0, "Hộ gia đình và doanh nghiệp trao đổi trong thị trường hàng hóa và dịch vụ."),
+            makeQ("What is an example of a market failure?", [
+                "Efficient allocation of resources",
+                "Pollution caused by production",
+                "Perfect competition",
+                "All goods priced equally"
+            ], 1, "Ô nhiễm là ngoại tác tiêu cực → thất bại thị trường."),
+            makeQ("What does 'a country's standard of living depends on its ability to produce goods and services' mean?", [
+                "Rich countries produce more than poor countries",
+                "Productivity is key to economic well-being",
+                "Both a and b",
+                "None of the above"
+            ], 2, "Năng suất lao động quyết định mức sống."),
+            makeQ("Why do economists disagree?", [
+                "Because of differences in scientific judgment and values",
+                "They never disagree",
+                "Due to lack of data only",
+                "Because economics is not a science"
+            ], 0, "Khác biệt về đánh giá khoa học và giá trị."),
+            makeQ("What is the difference between positive and normative statements?", [
+                "Positive statements are based on opinions, normative statements are facts",
+                "Positive statements describe the world as it is, normative statements prescribe how the world should be",
+                "Both are opinions",
+                "There is no difference"
+            ], 1, "Positive: mô tả thực tế; Normative: nên thế nào."),
+            makeQ("Economic growth shifts the Production Possibilities Frontier PPF:", [
+                "Inward",
+                "Outward",
+                "Does not shift",
+                "Downward"
+            ], 1, "Tăng trưởng kinh tế dịch PPF ra ngoài."),
+            makeQ("Which of the following would cause a decrease in the supply of a good?", [
+                "A decrease in the number of sellers.",
+                "A technological advancement in the production process.",
+                "A decrease in the cost of production inputs.",
+                "An increase in the price of the good."
+            ], 0, "Số lượng người bán giảm → cung giảm."),
+            makeQ("If the price of coffee increases, what happens in the market for tea, assuming they are substitutes?", [
+                "Demand for tea decreases",
+                "Demand for tea increases",
+                "Supply of tea increases",
+                "Quantity demanded for tea decreases"
+            ], 1, "Cà phê và trà là hàng thay thế, giá cà phê tăng → cầu trà tăng."),
+            makeQ("What would happen to the equilibrium price and quantity in the market for electric cars if both supply and demand increase?", [
+                "Price falls, quantity rises",
+                "Price is uncertain, quantity rises",
+                "Price rises, quantity falls",
+                "Both price and quantity fall"
+            ], 1, "Cả cung và cầu tăng → lượng tăng, giá không xác định."),
+            makeQ("If the price of a complement good decreases, what is the expected effect on the demand for the related good?", [
+                "The demand for the related good increases.",
+                "The demand for the related good decreases.",
+                "The quantity demanded of the related good decreases, but the demand remains the same.",
+                "The demand for the related good becomes perfectly inelastic."
+            ], 0, "Giá hàng bổ sung giảm → cầu hàng liên quan tăng."),
+            makeQ("An example of a binding price floor is:", [
+                "Minimum wage set below market wage",
+                "Minimum wage set above market wage",
+                "Rent control",
+                "Sales tax"
+            ], 1, "Giá sàn ràng buộc khi lương tối thiểu cao hơn lương thị trường."),
+            makeQ("A subsidy to producers generally has what effect on the market?", [
+                "It increases the quantity supplied and lowers the market price.",
+                "It decreases the quantity supplied.",
+                "It shifts the supply curve to the left.",
+                "It has no effect on the market equilibrium."
+            ], 0, "Trợ cấp → cung tăng → giá giảm."),
+            makeQ("The height of the demand curve shows:", [
+                "The price producers receive",
+                "The cost of producing a good",
+                "The value buyers place on a good",
+                "Total market surplus"
+            ], 2, "Đường cầu thể hiện giá trị người mua đánh giá hàng hóa."),
+            makeQ("The area above the supply curve and below the price represents:", [
+                "Producer surplus",
+                "Consumer surplus",
+                "Deadweight loss",
+                "Market equilibrium"
+            ], 0, "PS = diện tích trên đường cung, dưới mức giá."),
+            makeQ("A competitive market outcome is efficient if:", [
+                "Government sets a price floor",
+                "Total surplus is maximized",
+                "Producer surplus is maximized at the expense of consumer surplus",
+                "Taxes are imposed to reduce consumption"
+            ], 1, "Hiệu quả khi tổng thặng dư tối đa."),
+            makeQ("A deadweight loss is a loss in:", [
+                "Consumer surplus only",
+                "Producer surplus only",
+                "Total surplus due to market inefficiency",
+                "Government revenue"
+            ], 2, "Mất mát vô ích là tổn thất tổng thặng dư do kém hiệu quả."),
+            makeQ("Implicit costs are:", [
+                "Costs that require an outlay of money by the firm",
+                "Input costs that do not require an outlay of money by the firm",
+                "Sunk costs",
+                "Fixed costs"
+            ], 1, "Chi phí ngầm không cần chi tiền mặt."),
+            makeQ("The marginal product of an input is:", [
+                "The increase in total cost from producing one more unit of output",
+                "The additional output produced from an additional unit of input",
+                "The total output divided by the total input",
+                "The cost of producing one more unit of output"
+            ], 1, "Sản phẩm cận biên là sản lượng thêm từ một đơn vị đầu vào."),
+            makeQ("In the long run, all costs are:", [
+                "Fixed",
+                "Variable",
+                "Sunk",
+                "Marginal"
+            ], 1, "Dài hạn mọi chi phí đều biến đổi."),
+            makeQ("In a perfectly competitive market, firms are:", [
+                "Price takers",
+                "Price makers",
+                "Able to set prices above marginal cost",
+                "Able to restrict output to raise prices"
+            ], 0, "Hãng cạnh tranh hoàn hảo là người chấp nhận giá."),
+            makeQ("A perfectly competitive firm maximizes profit by producing where:", [
+                "Marginal revenue equals marginal cost",
+                "Average total cost equals marginal cost",
+                "Total revenue equals total cost",
+                "Average variable cost is minimized"
+            ], 0, "MR = MC."),
+            makeQ("Which of the following would cause a firm to exit a perfectly competitive market in the long run?", [
+                "Economic profit",
+                "Price below average total cost",
+                "Price above average variable cost",
+                "Increasing demand"
+            ], 1, "Giá thấp hơn ATC → lỗ → rời khỏi thị trường."),
+            makeQ("Monopolies can sustain positive economic profits in the long run because:", [
+                "They face many competitors",
+                "Barriers to entry prevent new firms from entering the market",
+                "They always produce at minimum average cost",
+                "Consumer demand is perfectly elastic"
+            ], 1, "Rào cản gia nhập giúp độc quyền giữ lợi nhuận dài hạn."),
+            makeQ("A monopolist's marginal revenue curve lies:", [
+                "Above the demand curve",
+                "Below the demand curve",
+                "On the demand curve",
+                "Horizontal"
+            ], 1, "MR < P → MR nằm dưới đường cầu."),
+            makeQ("Which of the following is true about a monopolist's profit-maximizing output?", [
+                "It is where marginal cost equals marginal revenue",
+                "It is where price equals marginal cost",
+                "It is at the highest possible output level",
+                "It maximizes consumer surplus"
+            ], 0, "MR = MC."),
+            makeQ("Price discrimination involves:", [
+                "Charging all customers the same price",
+                "Charging different prices to different customers for the same product",
+                "Selling different products at different prices",
+                "Limiting output to increase prices"
+            ], 1, "Phân biệt giá: bán cùng sản phẩm với giá khác nhau cho các khách hàng khác nhau."),
+            makeQ("If the government imposes a price ceiling below the equilibrium price for rental apartments, what is likely to occur?", [
+                "A surplus of apartments",
+                "A shortage of apartments",
+                "The market clears",
+                "An increase in apartment quality"
+            ], 1, "Giá trần dưới cân bằng → thiếu hụt."),
+            makeQ("If the government imposes a tax on a good for which demand is inelastic and supply is elastic, who bears the larger burden of the tax?", [
+                "Consumers bear the larger burden of the tax.",
+                "Producers bear the larger burden of the tax.",
+                "The burden of the tax is equally shared between consumers and producers.",
+                "The burden of the tax falls entirely on the government."
+            ], 0, "Cầu không co giãn → người tiêu dùng chịu thuế nhiều hơn."),
+            makeQ("Compared to a monopoly, monopolistic competition results in:", [
+                "More product variety but less market power",
+                "Less product variety and more market power",
+                "No difference in product variety",
+                "Perfectly elastic demand"
+            ], 0, "Nhiều đa dạng hơn, ít sức mạnh thị trường hơn."),
+            makeQ("Perfect price discrimination:", [
+                "Results in zero deadweight loss",
+                "Generates maximum deadweight loss",
+                "Charges all customers the same price",
+                "Is impossible in real markets"
+            ], 0, "Phân biệt giá hoàn hảo loại bỏ mất mát vô ích."),
+            makeQ("When marginal cost is less than average total cost, average total cost is:", [
+                "Increasing",
+                "Decreasing",
+                "Constant",
+                "Maximized"
+            ], 1, "MC < ATC → ATC đang giảm."),
+        ];
+
+        // ===== BỘ ĐỀ 3 (50 câu) =====
+        const DE3 = [
+            makeQ("Which of the following statements best describe a price-taking firm?", [
+                "If the firm raise its prices over the market rate, it would fail to sell any of its products",
+                "In order to increase revenue, the firm is incentivized to lower prices than the market rate",
+                "Only a certain quantity of the product can be sold by the firm at the market price before the market price will fall",
+                "Price-taking firms maximize profits by charging a price above MC"
+            ], 0, "Tăng giá → mất toàn bộ khách hàng."),
+            makeQ("Total surplus is equal to", [
+                "Amount received by sellers - Cost to sellers",
+                "Value to buyers - Cost to sellers",
+                "Value to buyers - Amount paid by buyers",
+                "Value to buyers - Amount paid by Sellers"
+            ], 1, "TS = Giá trị với người mua – Chi phí người bán."),
+            makeQ("The maximum price that a consumer will pay for a good is called the", [
+                "cost.",
+                "willingness to pay.",
+                "variable cost.",
+                "fixed cost."
+            ], 1, "WTP là mức giá tối đa người tiêu dùng sẵn lòng trả."),
+            makeQ("Producer Surplus", [
+                "is equal to amount a seller is paid for a good minus the seller's cost of providing it.",
+                "is equal to the amount paid by buyers - Costs of buyers.",
+                "is equal to the value to sellers - Costs of sellers.",
+                "is equal to the value to sellers - Willingness to pay of sellers."
+            ], 0, "PS = Giá bán – Chi phí của người bán."),
+            makeQ("If a consumer is willing and able to pay $30 for a particular good and if he pays $25 for the good, then for that consumer, consumer surplus amounts to", [
+                "$5.",
+                "$55.",
+                "$30.",
+                "$25."
+            ], 0, "CS = 30 – 25 = 5."),
+            makeQ("Assume all capital is owned by firms, rather than by households. Under this assumption, capital is paid according to the value of its marginal product", [
+                "only if this income is transmitted to households in the form of interest",
+                "only if this income is transmitted to households in the form of dividends",
+                "only if this income is transmitted to households in the form of interest or dividends",
+                "regardless of whether this income is transmitted to households in the form of interest or dividends or whether it is kept within firms as retained earnings"
+            ], 3, "Vốn được trả theo VMP, không phụ thuộc hình thức phân phối."),
+            makeQ("According to the neoclassical theory of distribution, the wages paid to workers", [
+                "reflect the market prices of the goods those workers produce",
+                "reflect the degree of market power held by the firms that pay those wages",
+                "fail to reflect those workers' opportunity costs of leisure",
+                "are unrelated to the forces of supply and demand"
+            ], 0, "Tiền lương phản ánh giá thị trường của hàng hóa mà lao động tạo ra."),
+            makeQ("The marginal product of any factor of production depends on", [
+                "the quantity of the input used",
+                "the price of the final good",
+                "the demand for the final good",
+                "All of the above are correct"
+            ], 0, "Sản phẩm cận biên phụ thuộc vào lượng đầu vào sử dụng."),
+            makeQ("Suppose that the market for labor is initially in equilibrium. An increase in immigration will cause the equilibrium wage", [
+                "and the equilibrium quantity of labor to rise",
+                "and the equilibrium quantity of labor to fall",
+                "to rise and the equilibrium quantity of labor to fall",
+                "to fall and the equilibrium quantity of labor to rise"
+            ], 3, "Tăng nhập cư → cung lao động tăng → tiền lương giảm, lượng lao động tăng."),
+            makeQ("What is the definition of price discrimination?", [
+                "bundling related products to increase total sales.",
+                "selling the same good at different prices to different customers.",
+                "pricing above marginal cost.",
+                "hiring marketing experts to increase consumers' brand loyalty."
+            ], 1, "Phân biệt giá = bán cùng hàng hóa với giá khác nhau cho các khách hàng khác nhau."),
+            makeQ("When a monopolist increases the number of units it sells, there are two effects on revenue. They are the", [
+                "demand effect and the supply effect.",
+                "competition effect and the cost effect.",
+                "competitive effect and the monopoly effect.",
+                "output effect and the price effect."
+            ], 3, "Hiệu ứng sản lượng và hiệu ứng giá."),
+            makeQ("Which of the following statements is correct?", [
+                "Corrective taxes are often preferred over direct regulation because they typically reduce externalities at a lower cost",
+                "Corrective taxes distort economic incentives",
+                "Corrective taxes are often preferred over direct regulation because they typically reduce externalities at a faster rate",
+                "Both a and b are correct"
+            ], 0, "Thuế điều chỉnh được ưa chuộng vì chi phí thấp hơn."),
+            makeQ("When negative externalities are present in a market", [
+                "private costs will be greater than social costs",
+                "social costs will be greater than private costs",
+                "only government regulation will solve the problem",
+                "the market will not be able to reach any equilibrium"
+            ], 1, "Ngoại tác tiêu cực: chi phí xã hội > chi phí tư nhân."),
+            makeQ("Which of the following statements is not correct?", [
+                "A gasoline tax is designed to correct traffic congestion problems.",
+                "A gasoline tax is designed to correct traffic accidents problems.",
+                "A gasoline tax is designed to correct air pollution problems.",
+                "A gasoline tax is designed to correct EPA regulations problems."
+            ], 3, "Thuế xăng không nhằm sửa quy định EPA."),
+            makeQ("Which of the following statements is not correct?", [
+                "Externalities can be corrected by self-interest.",
+                "Externalities can be corrected by moral codes and social sanctions.",
+                "Externalities can be corrected by charity.",
+                "Externalities can be corrected by normal market adjustments."
+            ], 3, "Điều chỉnh thị trường thông thường không thể giải quyết ngoại tác."),
+            makeQ("Which of the following is not an argument made by critics of advertising?", [
+                "Advertising manipulates people's tastes.",
+                "Advertising impedes competition.",
+                "Advertising promotes economies of scale.",
+                "Advertising increases the perception of product differentiation."
+            ], 2, "Thúc đẩy kinh tế nhờ quy mô là lập luận ủng hộ."),
+            makeQ("Which of the following is true about advertising?", [
+                "provides information about products, including prices and seller locations.",
+                "has been proven to increase competition and reduce prices compared to markets without advertising.",
+                "signals quality to consumers, because advertising is expensive.",
+                "All of these are correct."
+            ], 3, "Quảng cáo có nhiều lợi ích: thông tin, cạnh tranh, tín hiệu chất lượng."),
+            makeQ("Which of the following factors does NOT directly affect the demand for a product?", [
+                "Consumer income.",
+                "Prices of related goods.",
+                "Technology used to produce the product.",
+                "Consumer preferences."
+            ], 2, "Công nghệ ảnh hưởng đến cung, không trực tiếp đến cầu."),
+            makeQ("Among the listed events, which one results in a shift that goes downward and to the left along the supply curve for mangos?", [
+                "There's a reduction in the quantity of mango sellers.",
+                "Technological progress leads to lower mango production costs.",
+                "Mango prices experience a decline.",
+                "The cost of fertilizer, a necessary component in mango production, rises."
+            ], 2, "Giá giảm → di chuyển dọc theo đường cung xuống dưới-bên trái."),
+            makeQ("Which of the following would cause a shift in the demand curve for a product?", [
+                "A decrease in the price of the product.",
+                "An increase in consumer income for a normal good.",
+                "A change in the price of resources used to produce the product.",
+                "An increase in the quantity supplied of the product."
+            ], 1, "Thu nhập tăng làm dịch chuyển đường cầu."),
+            makeQ("What causes a shift in the supply curve?", [
+                "A change in the price of the good",
+                "Improved production technology.",
+                "A change in consumer preferences.",
+                "Increased competition among buyers"
+            ], 1, "Công nghệ cải tiến dịch chuyển đường cung."),
+            makeQ("Output Price MC: 0 $10 -- 1 $9 $3 2 $8 $4 3 $7 $5 4 $6 $6 5 $5 $7 6 $4 $8. What price should the firm charge to maximize its profit?", [
+                "$4",
+                "$5",
+                "$6",
+                "$7"
+            ], 2, "Tại Q=4, P=6, MC=6, MR=6 → P=6."),
+            makeQ("A government-created monopoly arises when", [
+                "government spending in a certain sector gives rise to monopoly power",
+                "the government creates its market control by encouraging competition among sellers",
+                "the government gives a firm the exclusive right to sell some good or service",
+                "All of the above are correct"
+            ], 2, "Độc quyền do chính phủ tạo ra khi cấp độc quyền bán."),
+            makeQ("Which of the following is not one of the example that antitrust laws promote competition?", [
+                "Antitrust laws allow the government to prevent mergers",
+                "Antitrust laws allow the government to break up large companies into smaller ones",
+                "Antitrust laws prevent companies from coordinating their activities that make markets less competitive",
+                "Antitrust laws allow the government to shut down any firm that has monopoly power"
+            ], 3, "Luật chống độc quyền không đóng cửa hãng có sức mạnh độc quyền."),
+            makeQ("Which of the following is always correct for a monopoly firm?", [
+                "P = MR",
+                "P = AR",
+                "P = TR",
+                "MR = MC"
+            ], 1, "Đối với độc quyền, P = AR."),
+            makeQ("Which of the following is not an example of price discrimination?", [
+                "A movie theater charges a lower price for children's ticket than for adults' ticket.",
+                "A university give financial aids poor students",
+                "Pizza Hut offers a 'buy three get one free' deal",
+                "An ice cream shop charges a higher price for chocolate ice cream than for coconut ice cream"
+            ], 3, "Giá sô cô la và dừa khác nhau là sản phẩm khác nhau, không phải phân biệt giá."),
+            makeQ("When two goods are perfect substitutes, the marginal rate of substitution", [
+                "is constant along the indifference curve",
+                "decreases as the scarcity of one good increases",
+                "increases as the scarcity of one good increases",
+                "changes to reflect the consumer's changing preferences for the goods"
+            ], 0, "Hàng thay thế hoàn hảo → MRS không đổi."),
+            makeQ("Which of the following best describes why indifference curves cannot cross?", [
+                "If indifference curves cross, there are situations where individuals are indifferent between bundles where one bundle contains strictly more of both goods than the other bundle",
+                "If indifference curves cross, individuals are not necessarily consuming along their budget line",
+                "If indifference curves cross, the marginal rate of substitution can be both increasing and decreasing at a specific point",
+                "If indifference curves cross, the goods can be both substitutes and complements"
+            ], 0, "Đường bàng quan cắt nhau vi phạm tính bắc cầu và nhiều hơn được ưa thích hơn."),
+            makeQ("In the short run, rent control causes the quantity supplied", [
+                "and quantity demanded to fall",
+                "to fall and quantity demanded to rise",
+                "to rise and quantity demanded to fall",
+                "and quantity demanded to rise"
+            ], 1, "Kiểm soát tiền thuê nhà → cung giảm, cầu tăng."),
+            makeQ("Which of the following is an example of a price floor?", [
+                "Rent control laws.",
+                "Minimum wage legislation.",
+                "Government-imposed tax cuts.",
+                "Subsidies for farmers."
+            ], 1, "Lương tối thiểu là giá sàn."),
+            makeQ("What is one likely consequence of a price ceiling that is set below the equilibrium price?", [
+                "Surplus of goods.",
+                "Shortage of goods.",
+                "Increase in production efficiency.",
+                "Decrease in consumer demand."
+            ], 1, "Giá trần dưới cân bằng → thiếu hụt."),
+            makeQ("What is a price ceiling?", [
+                "A minimum price set by the government above the equilibrium price.",
+                "A maximum price set by the government below the equilibrium price.",
+                "A price that is determined only by supply and demand.",
+                "A price set to increase production efficiency."
+            ], 1, "Giá trần là mức giá tối đa do chính phủ đặt ra, thường dưới giá cân bằng."),
+            makeQ("Motor oil and gasoline are complements. If the price of motor oil increases, consumer surplus in the gasoline market", [
+                "decreases",
+                "is unchanged",
+                "increases",
+                "may increase, decrease, or remain unchanged"
+            ], 0, "Giá dầu máy tăng → cầu xăng giảm → thặng dư tiêu dùng xăng giảm."),
+            makeQ("Which of the following is not equal to total surplus?", [
+                "consumer surplus - producer surplus",
+                "buyers' willingness to pay - sellers' costs",
+                "value to buyers - amount paid by buyers + amount received by sellers - cost to sellers",
+                "value to buyers - cost to sellers"
+            ], 0, "TS = CS + PS, không phải CS – PS."),
+            makeQ("If we see many advertising of men's shampoo products, we can conclude that", [
+                "the market for those products is perfectly competitive",
+                "it costs firms very little to produce those products",
+                "those products are highly differentiated",
+                "firms are irrational in their decisions to advertise"
+            ], 2, "Quảng cáo nhiều → sản phẩm khác biệt hóa cao."),
+            makeQ("Hotels in Bùi Viên (Ho Chi Minh City) used to experience an average vacancy rate of about 20 percent (on an average night, 80% of the hotel rooms are full). This kind of excess capacity is of what kind of market?", [
+                "monopoly",
+                "perfect competition",
+                "monopolistic competition",
+                "oligopoly"
+            ], 2, "Công suất dư thừa là đặc trưng của cạnh tranh độc quyền."),
+            makeQ("Which of the following correctly lists the products in an order from most advertised to least advertised?", [
+                "soft drinks, breakfast cereals, dog food",
+                "corn, dog food, communication satellites",
+                "dog food, communication satellites, corn",
+                "wheat, corn, crude oil"
+            ], 0, "Sản phẩm khác biệt hóa cao quảng cáo nhiều hơn hàng hóa đồng nhất."),
+            makeQ("The firm has TFC of $9 and MC of $3 per unit. Given price-quantity table, the firm will maximize profit with", [
+                "9 units of output",
+                "15 units of output",
+                "21 units of output",
+                "30 units of output"
+            ], 1, "Tính lợi nhuận tại mỗi mức Q, lớn nhất tại Q=15."),
+            makeQ("New firms may enter a monopolistically competitive market when price exceeds", [
+                "MR",
+                "AR",
+                "MC",
+                "ATC"
+            ], 3, "Gia nhập khi P > ATC (có lợi nhuận)."),
+            makeQ("For a certain firm, the 500th unit of output that the firm produces has a marginal revenue of $20 and a marginal cost of $23. It follows that the", [
+                "production of the 500th unit of output increases the firm's profit by $3.",
+                "production of the 500th unit of output increases the firm's average total cost by $3.",
+                "firm's profit-maximizing level of output is less than 500 units.",
+                "production of the 510th unit of output must increase the firm's profit by less than $3."
+            ], 2, "MR < MC → sản lượng tối ưu nhỏ hơn 500."),
+            makeQ("For a certain firm, the 250th unit of output that the firm produces has a marginal revenue of $20 and a marginal cost of $15. It follows that the", [
+                "production of the 250th unit of output increases the firm's profit by $5.",
+                "production of the 250th unit of output increases the firm's average total cost by $15.",
+                "firm's profit-maximizing level of output is less than 250 units.",
+                "production of the 249th unit of output must increase the firm's profit by less than $5."
+            ], 0, "MR – MC = 5 → lợi nhuận tăng 5."),
+            makeQ("The income effect encourages the consumer to purchase less of the good, and the substitution effect encourages the consumer to purchase more of the good.", [
+                "When the price of a normal good increases.",
+                "When the price of a normal good decreases.",
+                "When the price of an inferior good decreases.",
+                "When the price of an inferior good increases."
+            ], 2, "Khi giá hàng cấp thấp giảm: thu nhập thực tế tăng, nhưng hiệu ứng thay thế khiến tiêu dùng hàng cấp thấp giảm, thay bằng hàng bình thường."),
+            makeQ("Which of the following statements is correct?", [
+                "A budget constraint illustrates the prices that a consumer chooses to pay for products he consumes.",
+                "A budget constraint illustrates the purchases made by consumers.",
+                "A budget constraint illustrates the consumption bundles that a consumer can afford.",
+                "A budget constraint illustrates the consumption bundles that give a consumer equal satisfaction."
+            ], 2, "Đường ngân sách thể hiện các giỏ hàng mà người tiêu dùng có thể mua."),
+            makeQ("Dan and Silina each like jewelry and music by the Black pink. If we were to graph an indifference curve with jewelry on the horizontal axis and cd's by the Black pink on the vertical axis, then", [
+                "Dan and Silina would have identical indifference curves.",
+                "Dan's indifference curve would be higher than Silina's indifference curve.",
+                "Silina's indifference curve would be higher than Dan's indifference curve.",
+                "Because we do not know the intensity of each woman's preferences, we do not have enough information to compare their indifference curves."
+            ], 3, "Không biết mức độ ưa thích, không thể so sánh đường bàng quan."),
+            makeQ("The income effect encourages the consumer to purchase more of the good, and the substitution effect encourages the consumer to purchase less of the good.", [
+                "When the price of a normal good increases.",
+                "When the price of a normal good decreases.",
+                "When the price of an inferior good decreases.",
+                "When the price of an inferior good increases."
+            ], 3, "Khi giá hàng cấp thấp tăng: thu nhập thực tế giảm → mua ít hơn; hiệu ứng thay thế chuyển sang hàng bình thường."),
+            makeQ("Which of the following statements is correct?", [
+                "When the price of a normal good increases, both the income and substitution effects encourage the consumer to purchase more of the good.",
+                "When the price of a normal good increases, both the income and substitution effects encourage the consumer more to purchase less of the good.",
+                "When the price of a normal good increases, the income effect encourages the consumer to purchase more of the good, and the substitution effect encourages the consumer to purchase less of the good.",
+                "When the price of a normal good increases, the income effect encourages the consumer to purchase less of the good, and the substitution effect encourages the consumer to purchase more of the good."
+            ], 1, "Giá hàng hóa thông thường tăng → cả hai hiệu ứng đều làm giảm tiêu dùng."),
+            makeQ("Since most of the products sold in a competitive market are the same,", [
+                "there will be few sellers in the market",
+                "there will be few buyers in the market",
+                "only a few buyers will have market power",
+                "the sellers will not be willing to cut the market price"
+            ], 3, "Sản phẩm đồng nhất → người bán không muốn giảm giá vì sẽ mất lợi nhuận."),
+        ];
+
+        // ===== BỘ ĐỀ 4 (50 câu) =====
+        const DE4 = [
+            makeQ("The level of output at which a firm's MR and MC curves intersect means", [
+                "TR = VC",
+                "TR = FC",
+                "TR = TC",
+                "profit is maximized"
+            ], 3, "MR = MC là điều kiện tối đa hóa lợi nhuận."),
+            makeQ("Which of the following statements best describe a firm's profit-maximizing decision rule?", [
+                "If MR > MC, the firm should increase its output",
+                "If MR < MC, the firm should decrease its output",
+                "If MR = MC, the firm should continue producing its current level of output",
+                "All of the above are correct"
+            ], 3, "Quy tắc tối đa hóa lợi nhuận."),
+            makeQ("Which of the following statements is not correct about competitive market?", [
+                "firms will be operating at their efficient scale in a long run",
+                "the number of firms may be fixed in a short run",
+                "the number of firms can adjust to changing market conditions in a long run",
+                "firms will be operating at a level of output where price equals AVC in a short run"
+            ], 3, "Ngắn hạn, hãng có thể sản xuất ở mức P > AVC, không nhất thiết bằng AVC."),
+            makeQ("Willie sells equipments for fishing in a competitive market. If his equipments sell for $100 each and the ATC per unit is $95 at the profit-maximizing output level, then in the long run", [
+                "more firms will enter the market",
+                "some firms will exit from the market",
+                "the equilibrium market price will rise",
+                "ATC will fall"
+            ], 0, "P > ATC → lợi nhuận dương → gia nhập."),
+            makeQ("The maximum price that a consumer will pay for a good is called the", [
+                "cost.",
+                "willingness to pay.",
+                "variable cost.",
+                "fixed cost."
+            ], 1, "WTP là giá tối đa."),
+            makeQ("Total surplus is equal to", [
+                "Consumer surplus + Producer surplus",
+                "Amount received by sellers + Cost to sellers",
+                "Value to buyers + Amount paid by buyers",
+                "Value to buyers + Amount paid by Sellers"
+            ], 0, "TS = CS + PS."),
+            makeQ("Which of the following statements is correct?", [
+                "Consumer surplus in a market can be represented by the area below the demand curve and above the price.",
+                "Consumer surplus in a market can be represented by the distance from the demand curve to the horizontal axis.",
+                "Consumer surplus in a market can be represented by the distance from the demand curve to the vertical axis.",
+                "Consumer surplus in a market can be represented by the area below the demand curve and above the horizontal axis."
+            ], 0, "CS = diện tích dưới đường cầu, trên mức giá."),
+            makeQ("Lisa is willing to pay $500 for a new suit, but she is able to buy the suit for $350. Her consumer surplus is", [
+                "$150.",
+                "$300.",
+                "$350.",
+                "$500."
+            ], 0, "CS = 500 – 350 = 150."),
+            makeQ("The factors of production are best defined as the", [
+                "output produced from raw materials",
+                "inputs used to produce goods and services",
+                "wages paid to the workforce",
+                "goods and services sold in the market"
+            ], 1, "Yếu tố sản xuất là đầu vào."),
+            makeQ("Suppose the government designates certain areas within a community to be 'wetlands,' making it illegal to build on the land. What happens to land not classified as 'wetlands' within the community? (i) The price of non-wetland land will rise. (ii) The marginal product of non-wetland land will fall. (iii) The marginal product of non-wetland land will rise.", [
+                "(i) and (ii) only",
+                "(ii) only",
+                "(i) and (iii) only",
+                "(iii) only"
+            ], 2, "Đất không đầm lầy khan hiếm hơn → giá tăng, MP tăng."),
+            makeQ("Capital is paid according to the value of its marginal product", [
+                "only if earnings from capital are paid to households in the form of dividends",
+                "regardless of whether earnings from capital are paid to households in the form of dividends or whether those earnings are kept within firms as retained earnings",
+                "only if earnings from capital are kept within firms as retained earnings",
+                "None of the above is correct; unlike labor, capital is a factor of production for which earnings are unrelated to the value of marginal product"
+            ], 1, "Vốn được trả theo VMP."),
+            makeQ("According to the neoclassical theory of distribution, the wages paid to workers depend on the", [
+                "supply of labor",
+                "demand for labor",
+                "marginal productivity of labor",
+                "All of the above are correct"
+            ], 2, "Tiền lương phụ thuộc vào sản phẩm cận biên của lao động."),
+            makeQ("The market demand curve for a monopolist is typically", [
+                "unit price elastic.",
+                "downward sloping.",
+                "horizontal.",
+                "vertical."
+            ], 1, "Đường cầu độc quyền dốc xuống."),
+            makeQ("Patent and copyright laws are major sources of", [
+                "natural monopolies.",
+                "government-created monopolies.",
+                "resource monopolies.",
+                "antitrust regulation."
+            ], 1, "Bằng sáng chế và bản quyền tạo độc quyền."),
+            makeQ("For the purpose of protecting the environment, upon which of the following approaches do we rely more and more as time goes by?", [
+                "adherence to the notion of the invisible hand",
+                "command-and-control policies",
+                "the development and enforcement of regulations",
+                "the requirement that decision makers bear the full costs of their actions"
+            ], 3, "Xu hướng yêu cầu người gây ô nhiễm phải chịu chi phí."),
+            makeQ("Which of the following statements is not correct?", [
+                "Private markets tend to over-produce products with negative externalities",
+                "Private markets tend to under-produce products with positive externalities",
+                "Private parties can bargain to efficient outcomes even in the presence of externalities",
+                "Private parties are usually more successful in achieving efficient outcomes than government policies in the presence of externalities"
+            ], 3, "Tư nhân thường không thành công hơn chính phủ."),
+            makeQ("Which of the following statements is not correct?", [
+                "Externalities can be corrected by self-interest.",
+                "Externalities can be corrected by moral codes and social sanctions.",
+                "Externalities can be corrected by charity.",
+                "Externalities can be corrected by normal market adjustments."
+            ], 3, "Thị trường tự điều chỉnh không giải quyết được ngoại tác."),
+            makeQ("Which of the following statements is correct?", [
+                "Since air pollution creates a negative externality, social welfare will be enhanced when some, but not all air pollution is eliminated.",
+                "Since air pollution creates a negative externality, social welfare is optimal when all air pollution is eliminated.",
+                "Since air pollution creates a negative externality, governments should encourage private firms to consider only private costs.",
+                "Since air pollution creates a negative externality, the free market result maximizes social welfare."
+            ], 0, "Loại bỏ hoàn toàn ô nhiễm có thể không tối ưu vì chi phí quá lớn."),
+            makeQ("Which of the following is true about advertising?", [
+                "provides information about products, including prices and seller locations.",
+                "has been proven to increase competition and reduce prices compared to markets without advertising.",
+                "signals quality to consumers, because advertising is expensive.",
+                "All of these are correct."
+            ], 3, "Quảng cáo có nhiều lợi ích."),
+            makeQ("Which of the following is not a characteristic of monopolistic competition?", [
+                "a large number of sellers",
+                "firms are price takers",
+                "free entry into the market",
+                "a differentiated product"
+            ], 1, "Hãng cạnh tranh độc quyền có sức mạnh thị trường, không phải price takers."),
+            makeQ("What happens if the price of a good decreases?", [
+                "Quantity demanded increases",
+                "Quantity demanded decreases",
+                "Demand shifts left",
+                "Demand shifts right"
+            ], 0, "Luật cầu: giá giảm → lượng cầu tăng."),
+            makeQ("An increase in income increases demand for:", [
+                "Inferior goods.",
+                "Normal goods.",
+                "Substitutes",
+                "Unrelated goods"
+            ], 1, "Hàng hóa thông thường có quan hệ dương với thu nhập."),
+            makeQ("Which of the following is NOT a determinant of supply?", [
+                "Technology.",
+                "Cost of production inputs.",
+                "Consumer preferences.",
+                "Government taxes and subsidies."
+            ], 2, "Sở thích người tiêu dùng ảnh hưởng cầu, không phải cung."),
+            makeQ("An increase in supply is represented by a", [
+                "supply curve move along downward and to the left.",
+                "supply curve move along upward and to the right.",
+                "supply curve shift right.",
+                "supply curve shift left."
+            ], 2, "Tăng cung → dịch phải."),
+            makeQ("Which of the following is always correct for a monopoly firm?", [
+                "P = MR",
+                "P = AR",
+                "P = TR",
+                "MR = MC"
+            ], 1, "P = AR."),
+            makeQ("Which of the following statements is or are correct about monopoly? (i) A monopoly can set the price of its product at whatever level it desires. (ii) A monopoly's total revenue will increase when it increases the price of its product. (iii) When a monopoly increases output, it will get higher profits.", [
+                "(i) only",
+                "(ii) only",
+                "(i) and (ii) only",
+                "(ii) and (iii) only"
+            ], 0, "Độc quyền có thể đặt giá bất kỳ (nhưng phải phù hợp với cầu)."),
+            makeQ("Competitive firms are different from monopolies in which of the following ways? (i) Competitive firms are price takers; (ii) Marginal revenue for a competitive firm equals price, while marginal revenue for a monopoly is less than the price; (iii) Monopolies must lower their price in order to sell more, while competitive firms do not have to do so.", [
+                "(i) and (ii) only",
+                "(ii) and (iii) only",
+                "(i) and (iii) only",
+                "(i), (ii), and (iii)"
+            ], 3, "Tất cả đều đúng."),
+            makeQ("Which of the following is not one of the example that antitrust laws promote competition?", [
+                "Antitrust laws allow the government to prevent mergers",
+                "Antitrust laws allow the government to break up large companies into smaller ones",
+                "Antitrust laws prevent companies from coordinating their activities that make markets less competitive",
+                "Antitrust laws allow the government to shut down any firm that has monopoly power"
+            ], 3, "Không đóng cửa hãng có sức mạnh độc quyền."),
+            makeQ("A government-created monopoly arises when", [
+                "government spending in a certain sector gives rise to monopoly power",
+                "the government creates its market control by encouraging competition among sellers",
+                "the government gives a firm the exclusive right to sell some good or service",
+                "All of the above are correct"
+            ], 2, "Cấp độc quyền bán."),
+            makeQ("When two goods are perfect substitutes, the marginal rate of substitution", [
+                "is constant along the indifference curve",
+                "decreases as the scarcity of one good increases",
+                "increases as the scarcity of one good increases",
+                "changes to reflect the consumer's changing preferences for the goods"
+            ], 0, "MRS không đổi."),
+            makeQ("Assume that a college student purchases only Ramen noodles and textbooks. If Ramen noodles are an inferior good and textbooks are a normal good, then the substitution effect associated with a decrease in the price of a textbook, by itself, will result in", [
+                "a decrease in the consumption of textbooks and a decrease in the consumption of Ramen noodles",
+                "a decrease in the consumption of textbooks and an increase in the consumption of Ramen noodles",
+                "an increase in the consumption of textbooks and an increase in the consumption of Ramen noodles",
+                "an increase in the consumption of textbooks and a decrease in the consumption of Ramen noodles"
+            ], 3, "Hiệu ứng thay thế: sách rẻ hơn → mua sách nhiều hơn, Ramen ít hơn."),
+            makeQ("In the short run, rent control causes the quantity supplied", [
+                "and quantity demanded to fall",
+                "to fall and quantity demanded to rise",
+                "to rise and quantity demanded to fall",
+                "and quantity demanded to rise"
+            ], 1, "Cung giảm, cầu tăng."),
+            makeQ("What happens when a price floor is set above the equilibrium price?", [
+                "It causes a surplus of goods in the market.",
+                "It causes a shortage of goods in the market.",
+                "It allows the market to reach equilibrium.",
+                "It has no effect on the market."
+            ], 0, "Giá sàn trên cân bằng → dư thừa."),
+            makeQ("Which of the following is an example of a price floor?", [
+                "Rent control laws.",
+                "Minimum wage legislation.",
+                "Government-imposed tax cuts.",
+                "Subsidies for farmers."
+            ], 1, "Lương tối thiểu."),
+            makeQ("If the government levies a $500 tax per car on sellers of cars, then the price received by sellers of cars would", [
+                "decrease by exactly $500",
+                "decrease by less than $500",
+                "decrease by more than $500",
+                "increase by an indeterminate amount"
+            ], 1, "Gánh nặng thuế được chia, giá nhận của người bán giảm ít hơn 500."),
+            makeQ("Total surplus", [
+                "can be used to measure a market's efficiency",
+                "is the sum of consumer and producer surplus",
+                "is the value to buyers minus the cost to sellers",
+                "All of the above are correct"
+            ], 3, "TS có nhiều định nghĩa tương đương."),
+            makeQ("How many people will buy a bike priced at $200, given Noma (WTP=$250), Xian (WTP=$300), Chang (WTP=$175), and Yake (WTP=$125)?", [
+                "1",
+                "2",
+                "3",
+                "4"
+            ], 1, "Chỉ Noma và Xian có WTP ≥ 200 → 2 người mua."),
+            makeQ("Firms may have an incentive to advertise because they sell a", [
+                "homogeneous product and charge a price = MC",
+                "homogeneous product and charge a price > MC",
+                "differentiated product and charge a price = MC",
+                "differentiated product and charge a price > MC"
+            ], 3, "Quảng cáo có lợi khi sản phẩm khác biệt và P > MC."),
+            makeQ("People oppose to advertising said that advertising", [
+                "creates demand for products that consumers otherwise do not want or need",
+                "lowers barriers to entry into a market because new firms can more easily enter",
+                "increases competition by providing information about prices",
+                "encourages monopoly by raising entry barriers"
+            ], 0, "Quảng cáo tạo ra nhu cầu không cần thiết."),
+            makeQ("When firms exit a monopolistically competitive market, profits of remaining firms", [
+                "decrease and product diversity in the market decreases",
+                "decrease and product diversity in the market increases",
+                "increase and product diversity in the market decreases",
+                "increase and product diversity in the market increases"
+            ], 2, "Rút lui → ít đối thủ → lợi nhuận tăng, đa dạng giảm."),
+            makeQ("The firm has TFC of $9 and MC of $3 per unit. The firm will maximize profit with", [
+                "9 units of output",
+                "15 units of output",
+                "21 units of output",
+                "30 units of output"
+            ], 1, "Lợi nhuận lớn nhất tại Q=15."),
+            makeQ("Which of the following statements is correct?", [
+                "Cigarette are produced in a monopolistically competitive market",
+                "Novels are produced in a monopoly market",
+                "Movies are produced in a monopolistically competitive market",
+                "Milk are produced in an oligopoly market"
+            ], 2, "Phim ảnh có đặc điểm cạnh tranh độc quyền."),
+            makeQ("For a certain firm, the 250th unit of output that the firm produces has a marginal revenue of $20 and a marginal cost of $15. It follows that the", [
+                "production of the 250th unit of output increases the firm's profit by $5.",
+                "production of the 250th unit of output increases the firm's average total cost by $15.",
+                "firm's profit-maximizing level of output is less than 250 units.",
+                "production of the 249th unit of output must increase the firm's profit by less than $5."
+            ], 0, "MR – MC = 5."),
+            makeQ("For a certain firm, the 100th unit of output that the firm produces has a marginal revenue of $15 and a marginal cost of $11. It follows that the", [
+                "production of the 100th unit of output increases the firm's profit by $4.",
+                "production of the 100th unit of output increases the firm's average total cost by $11.",
+                "firm's profit-maximizing level of output is less than 100 units.",
+                "production of the 99th unit of output must increase the firm's profit by less than $4."
+            ], 0, "MR – MC = 4."),
+            makeQ("Which of the following statements is not correct?", [
+                "A consumer chooses an optimal consumption point where the marginal rate of substitution equals the relative price ratio.",
+                "A consumer chooses an optimal consumption point where the slope of the indifference curve equals the slope of the budget constraint.",
+                "A consumer chooses an optimal consumption point where the ratio of the marginal utilities equals the ratio of the prices.",
+                "A consumer chooses an optimal consumption point where the marginal rate of substitution is maximized."
+            ], 3, "MRS không được tối đa hóa, mà bằng tỷ lệ giá."),
+            makeQ("Which of the following statements is correct?", [
+                "If a good is a Giffen good, then the supply curve slopes down.",
+                "If a good is a Giffen good, then the demand curve slopes up.",
+                "If a good is a Giffen good, then the demand curve is horizontal.",
+                "If a good is a Giffen good, then there is no optimal level of consumption for the consumer."
+            ], 1, "Hàng hóa Giffen có đường cầu dốc lên."),
+            makeQ("Which of the following statements is correct?", [
+                "When the price of a normal good increases, both the income and substitution effects encourage the consumer to purchase more of the good.",
+                "When the price of a normal good increases, both the income and substitution effects encourage the consumer more to purchase less of the good.",
+                "When the price of a normal good increases, the income effect encourages the consumer to purchase more of the good, and the substitution effect encourages the consumer to purchase less of the good.",
+                "When the price of a normal good increases, the income effect encourages the consumer to purchase less of the good, and the substitution effect encourages the consumer to purchase more of the good."
+            ], 1, "Giá hàng bình thường tăng → cả hai hiệu ứng đều làm giảm tiêu dùng."),
+        ];
+
+        // ===== BỘ ĐỀ 5 (50 câu) =====
+        const DE5 = [
+            makeQ("Which of the following statements is correct?", [
+                "When the price of a normal good decreases, both the income and substitution effects encourage the consumer to purchase more of the good.",
+                "When the price of a normal good decreases, both the income and substitution effects encourage the consumer more to purchase less of the good.",
+                "When the price of a normal good decreases, the income effect encourages the consumer to purchase more of the good, and the substitution effect encourages the consumer to purchase less of the good.",
+                "When the price of a normal good decreases, the income effect encourages the consumer to purchase less of the good, and the substitution effect encourages the consumer to purchase more of the good."
+            ], 0, "Giá hàng bình thường giảm → cả hai hiệu ứng đều khuyến khích tiêu dùng nhiều hơn."),
+            makeQ("Which of the following statements is correct?", [
+                "Just as the theory of the competitive firm provides a more complete understanding of supply, the theory of consumer choice provides a more complete understanding of demand.",
+                "Just as the theory of the competitive firm provides a more complete understanding of supply, the theory consumer choice provides a more complete understanding of profits.",
+                "Just as the theory of the competitive firm provides a more complete understanding of supply, the theory of consumer choice provides a more complete understanding of production possibility frontiers.",
+                "Just as the theory of the competitive firm provides a more complete understanding of supply, the theory of consumer choice provides a more complete understanding of wages."
+            ], 0, "Lý thuyết người tiêu dùng giúp hiểu cầu."),
+            makeQ("Which of the following statements is not correct about competitive market?", [
+                "firms will be operating at their efficient scale in a long run",
+                "the number of firms may be fixed in a short run",
+                "the number of firms can adjust to changing market conditions in a long run",
+                "firms will be operating at a level of output where price equals AVC in a short run"
+            ], 3, "Ngắn hạn, P không nhất thiết bằng AVC."),
+            makeQ("Market competition exists when (i) Firms are free to set their own prices for their products: (ii) Every buyer is small in relation to the market; (iii) Every seller is small compared to the market.", [
+                "(i) and (ii) only",
+                "(i) and (iii) only",
+                "(ii) and (iii) only",
+                "(i), (ii), and (iii)"
+            ], 2, "Cạnh tranh thị trường: người mua và người bán nhỏ."),
+            makeQ("Which of the following does not describe a market that is competitive?", [
+                "Buyers and sellers are price takers",
+                "Every firm sells a nearly same product",
+                "Entry is difficult",
+                "Each firm chooses an output level that maximizes profits"
+            ], 2, "Gia nhập khó khăn không phải cạnh tranh hoàn hảo."),
+            makeQ("When new firms decide to enter a competitive market, their entry will", [
+                "increase the product price",
+                "drive down profits of existing firms in the market",
+                "shift the market supply curve to the left",
+                "increase demand for the product"
+            ], 1, "Gia nhập làm giảm lợi nhuận của hãng hiện tại."),
+            makeQ("Firms enter a competitive market when other firms in that market have", [
+                "TR > FC",
+                "TR > TVC",
+                "ATC > AR",
+                "ATC < Price"
+            ], 3, "Gia nhập khi P > ATC (có lợi nhuận)."),
+            makeQ("Hotels in Bùi Viên (Ho Chi Minh City) used to experience an average vacancy rate of about 20 percent (on an average night, 80% of the hotel rooms are full). This kind of excess capacity is of what kind of market?", [
+                "monopoly",
+                "perfect competition",
+                "monopolistic competition",
+                "oligopoly"
+            ], 2, "Công suất dư thừa là đặc trưng của cạnh tranh độc quyền."),
+            makeQ("If a consumer is willing and able to pay $30 for a particular good and if he pays $25 for the good, then for that consumer, consumer surplus amounts to", [
+                "$5.",
+                "$55.",
+                "$30.",
+                "$25."
+            ], 0, "CS = 30 – 25 = 5."),
+            makeQ("Which of the following statements is correct?", [
+                "When markets fail, public policy can do nothing to improve the situation.",
+                "When markets fail, public policy can potentially remedy the problem and increase economic efficiency.",
+                "When markets fail, public policy can always remedy the problem and increase economic efficiency.",
+                "When markets fail, public policy can: In theory, remedy the problem, but in practice, public policy has proven to be ineffective."
+            ], 1, "Chính sách công có thể khắc phục thất bại thị trường."),
+            makeQ("Total surplus is equal to", [
+                "Amount received by sellers - Cost to sellers",
+                "Value to buyers - Cost to sellers",
+                "Value to buyers - Amount paid by buyers",
+                "Value to buyers - Amount paid by Sellers"
+            ], 1, "TS = Value to buyers – Cost to sellers."),
+            makeQ("David produces coals at a cost of $300 per ton. If he sells the coals for $400 per ton, his producer surplus per ton is", [
+                "$100.",
+                "$200.",
+                "$350.",
+                "$550."
+            ], 0, "PS = 400 – 300 = 100."),
+            makeQ("Which of the following statements is correct?", [
+                "The value of the marginal product curve is the labor demand curve for competitive, profit-maximizing firms",
+                "A competitive, profit-maximizing firm hires workers up to the point where the value of the marginal product of labor equals the wage",
+                "By hiring labor up to the point where the value of the marginal product of labor equals the wage, the firm is producing where price equals marginal cost",
+                "All of the above are correct"
+            ], 3, "Tất cả đều đúng về thị trường lao động cạnh tranh."),
+            makeQ("Diminishing marginal product affects the shape of the production function in what way?", [
+                "The slope of the production function decreases as the quantity of input increases",
+                "The production function becomes steeper as the quantity of input increases",
+                "The production function slopes downward",
+                "The production function is horizontal beyond a certain quantity of input"
+            ], 0, "Năng suất cận biên giảm dần làm độ dốc hàm sản xuất giảm."),
+            makeQ("The marginal product of any factor of production depends on", [
+                "the quantity of the input used",
+                "the price of the final good",
+                "the demand for the final good",
+                "All of the above are correct"
+            ], 0, "Sản phẩm cận biên phụ thuộc vào lượng đầu vào."),
+            makeQ("Assume all capital is owned by firms, rather than by households. Under this assumption, capital is paid according to the value of its marginal product", [
+                "only if this income is transmitted to households in the form of interest",
+                "only if this income is transmitted to households in the form of dividends",
+                "only if this income is transmitted to households in the form of interest or dividends",
+                "regardless of whether this income is transmitted to households in the form of interest or dividends or whether it is kept within firms as retained earnings"
+            ], 3, "Vốn được trả theo VMP."),
+            makeQ("A monopoly market is characterized by", [
+                "many buyers and sellers.",
+                "one seller and one buyer",
+                "barriers to entry.",
+                "'natural' products."
+            ], 2, "Độc quyền có rào cản gia nhập."),
+            makeQ("For a profit-maximizing monopolist,", [
+                "P > MR = MC.",
+                "P = MR = MC.",
+                "P > MR > MC.",
+                "MR < MC < P."
+            ], 0, "Độc quyền: P > MR = MC."),
+            makeQ("The fundamental source of monopoly power is", [
+                "barriers to entry.",
+                "profit.",
+                "decreasing average total cost.",
+                "a product without close substitutes."
+            ], 0, "Rào cản gia nhập là nguồn gốc sức mạnh độc quyền."),
+            makeQ("When a monopolist increases the number of units it sells, there are two effects on revenue. They are the", [
+                "demand effect and the supply effect.",
+                "competition effect and the cost effect.",
+                "competitive effect and the monopoly effect.",
+                "output effect and the price effect."
+            ], 3, "Hiệu ứng sản lượng và hiệu ứng giá."),
+            makeQ("The market demand curve for a monopolist is typically", [
+                "unit price elastic.",
+                "downward sloping.",
+                "horizontal.",
+                "vertical."
+            ], 1, "Đường cầu độc quyền dốc xuống."),
+            makeQ("When negative externalities are present in a market", [
+                "private costs will be greater than social costs",
+                "social costs will be greater than private costs",
+                "only government regulation will solve the problem",
+                "the market will not be able to reach any equilibrium"
+            ], 1, "Ngoại tác tiêu cực: chi phí xã hội > chi phí tư nhân."),
+            makeQ("Which of the following statements is not correct?", [
+                "Private markets tend to over-produce products with negative externalities",
+                "Private markets tend to under-produce products with positive externalities",
+                "Private parties can bargain to efficient outcomes even in the presence of externalities",
+                "Private parties are usually more successful in achieving efficient outcomes than government policies in the presence of externalities"
+            ], 3, "Tư nhân thường không thành công hơn chính phủ."),
+            makeQ("If the government were to impose a fine of $4,000 for each unit of air-pollution released by a fertilizer plant, the policy would be considered", [
+                "a subsidy",
+                "a regulation",
+                "a corrective tax",
+                "an application of the Coase theorem"
+            ], 2, "Thuế điều chỉnh."),
+            makeQ("Which of the following statements is correct?", [
+                "If an externality is present in a market, economic efficiency may be enhanced by increased competition.",
+                "If an externality is present in a market, economic efficiency may be enhanced by weakening property rights.",
+                "If an externality is present in a market, economic efficiency may be enhanced by better informed market participants.",
+                "If an externality is present in a market, economic efficiency may be enhanced by government intervention."
+            ], 3, "Chính phủ can thiệp khi có ngoại tác."),
+            makeQ("Which of the following statements is correct?", [
+                "When a market is characterized by an externality, the government can correct the market failure only in the case of positive externalities.",
+                "When a market is characterized by an externality, the government can correct the market failure only when the case of negative externalities.",
+                "When a market is characterized by an externality, the government can correct the market failure in the case of both positive and negative externalities by inducing market participants to internalize the externality.",
+                "When a market is characterized by an externality, the government cannot correct for externalities due to the existence of patents."
+            ], 2, "Chính phủ có thể nội hóa ngoại tác cả hai loại."),
+            makeQ("A market structure in which there are many firms selling products that are similar but not identical is known as", [
+                "oligopoly.",
+                "monopoly.",
+                "monopolistic competition.",
+                "perfect competition."
+            ], 2, "Cạnh tranh độc quyền."),
+            makeQ("An oligopoly is a market in which", [
+                "there are only a few sellers, each offering a product similar or identical to the products offered by other firms in the market.",
+                "firms are price takers.",
+                "the actions of one seller in the market have no impact on the other sellers' profits.",
+                "there are many price-taking firms, each offering a product similar or identical to the products offered by other firms in the market."
+            ], 0, "Độc quyền tập đoàn: ít hãng, sản phẩm giống hoặc khác biệt."),
+            makeQ("Which of the following is a characteristic of oligopoly or monopolistic competition, but not perfect competition?", [
+                "advertising and sales promotion",
+                "profit maximization according to the MR = MC rule",
+                "firms being price takers rather than price makers",
+                "horizontal demand and marginal revenue curves"
+            ], 0, "Quảng cáo chỉ có trong thị trường có sản phẩm khác biệt hóa."),
+            makeQ("If a surplus exists in a market, then", [
+                "the actual market price is above the equilibrium price, and quantity supplied is greater than quantity demanded.",
+                "the actual market price is above the equilibrium price, and quantity demanded is greater than quantity supplied.",
+                "the actual market price is below the equilibrium price, and quantity demanded is greater than quantity supplied.",
+                "the actual market price is below the equilibrium price, and quantity supplied is greater than quantity demanded."
+            ], 0, "Dư thừa: P > cân bằng, Qs > Qd."),
+            makeQ("Which of the following changes would not shift the supply curve for a main good or service?", [
+                "a change in production technology",
+                "a change in the price of that good or service",
+                "a change in the price of different good or service",
+                "a change in input prices"
+            ], 1, "Thay đổi giá hàng hóa gây di chuyển dọc đường cung, không dịch chuyển."),
+            makeQ("The demand for a good or service is determined by", [
+                "the buyers.",
+                "the government.",
+                "the sellers.",
+                "All of the three parties mentioned."
+            ], 0, "Cầu do người mua quyết định."),
+            makeQ("Among the listed events, which one results in a shift that goes downward and to the left along the supply curve for mangos?", [
+                "There's a reduction in the quantity of mango sellers.",
+                "Technological progress leads to lower mango production costs.",
+                "Mango prices experience a decline.",
+                "The cost of fertilizer, a necessary component in mango production, rises."
+            ], 2, "Giá giảm → di chuyển dọc theo đường cung xuống dưới-bên trái."),
+            makeQ("A government-created monopoly arises when", [
+                "government spending in a certain sector gives rise to monopoly power",
+                "the government creates its market control by encouraging competition among sellers",
+                "the government gives a firm the exclusive right to sell some good or service",
+                "All of the above are correct"
+            ], 2, "Độc quyền do chính phủ cấp."),
+            makeQ("During Christmas holiday season, Vincom retailers often place a high price on merchandise on weekends and discount the price during the week. What do you call this price strategy?", [
+                "oligopoly",
+                "price discrimination",
+                "compensating differential",
+                "marginal cost pricing"
+            ], 1, "Phân biệt giá theo thời gian."),
+            makeQ("Assume that a college student purchases only Ramen noodles and textbooks. If Ramen noodles are an inferior good and textbooks are a normal good, then the substitution effect associated with a decrease in the price of a textbook, by itself, will result in", [
+                "a decrease in the consumption of textbooks and a decrease in the consumption of Ramen noodles",
+                "a decrease in the consumption of textbooks and an increase in the consumption of Ramen noodles",
+                "an increase in the consumption of textbooks and an increase in the consumption of Ramen noodles",
+                "an increase in the consumption of textbooks and a decrease in the consumption of Ramen noodles"
+            ], 3, "Hiệu ứng thay thế: sách rẻ hơn → mua sách nhiều hơn, Ramen ít hơn."),
+            makeQ("When two goods are perfect substitutes, the marginal rate of substitution", [
+                "is constant along the indifference curve",
+                "decreases as the scarcity of one good increases",
+                "increases as the scarcity of one good increases",
+                "changes to reflect the consumer's changing preferences for the goods"
+            ], 0, "MRS không đổi."),
+            makeQ("Which of the following best describes why indifference curves cannot cross?", [
+                "If indifference curves cross, there are situations where individuals are indifferent between bundles where one bundle contains strictly more of both goods than the other bundle",
+                "If indifference curves cross, individuals are not necessarily consuming along their budget line",
+                "If indifference curves cross, the marginal rate of substitution can be both increasing and decreasing at a specific point",
+                "If indifference curves cross, the goods can be both substitutes and complements"
+            ], 0, "Đường bàng quan cắt nhau vi phạm tính bắc cầu."),
+            makeQ("Price ceilings and price floors that are binding", [
+                "are desirable because they make markets more efficient and more fair",
+                "can have the effect of restoring a market to equilibrium",
+                "cause surpluses and shortages to persist because price cannot adjust to the market equilibrium price",
+                "are imposed because they can make the poor in the economy better off without causing adverse effects"
+            ], 2, "Giá trần và sàn ràng buộc gây dư thừa hoặc thiếu hụt."),
+            makeQ("Suppose that a binding rent control law is repealed in San Francisco. As a result, we would expect the total number of units rented in the city to", [
+                "increase",
+                "decrease",
+                "remain unchanged",
+                "decrease, then increase"
+            ], 0, "Bãi bỏ kiểm soát tiền thuê → cung tăng → số lượng thuê tăng."),
+            makeQ("If a tax is levied on the sellers of a product, then there will be a(n)", [
+                "downward shift of the supply curve",
+                "upward shift of the supply curve",
+                "decrease in quantity supplied",
+                "increase in quantity supplied"
+            ], 1, "Thuế đánh vào người bán làm đường cung dịch lên trên (giảm cung)."),
+            makeQ("In the short run, rent control causes the quantity supplied", [
+                "and quantity demanded to fall",
+                "to fall and quantity demanded to rise",
+                "to rise and quantity demanded to fall",
+                "and quantity demanded to rise"
+            ], 1, "Cung giảm, cầu tăng."),
+            makeQ("Bob purchases a book, and his consumer surplus is $3. If Bob is willing to pay $8 for the book, then the price of the book must be", [
+                "$3",
+                "$8",
+                "$5",
+                "$11"
+            ], 2, "Giá = WTP – CS = 8 – 3 = 5."),
+            makeQ("When markets fail, public policy can", [
+                "do nothing to improve the situation",
+                "potentially remedy the problem and increase economic efficiency",
+                "always remedy the problem and increase economic efficiency",
+                "in theory, remedy the problem, but in practice, public policy has proven to be ineffective"
+            ], 1, "Chính sách công có thể khắc phục."),
+            makeQ("Which of the following is not equal to total surplus?", [
+                "consumer surplus - producer surplus",
+                "buyers' willingness to pay - sellers' costs",
+                "value to buyers - amount paid by buyers + amount received by sellers - cost to sellers",
+                "value to buyers - cost to sellers"
+            ], 0, "TS = CS + PS, không phải CS – PS."),
+            makeQ("Which of the following conditions is characteristic of a monopolistically competitive firm in short-run?", [
+                "P = AR",
+                "MR = MC",
+                "P > MC",
+                "All of the above are correct"
+            ], 3, "Tất cả đều đúng."),
+            makeQ("A firm in a monopolistically competitive market is similar to a monopoly because: (i) they both face downward-sloping demand curves; (ii) they both charge a price that exceeds MC; (iii) free entry and exit in the long-run", [
+                "(i) only",
+                "(ii) only",
+                "(i) and (ii) only",
+                "(i), (ii), and (iii) only"
+            ], 2, "Giống độc quyền ở (i) và (ii), khác ở (iii)."),
+            makeQ("The commercial airline industry consisting of Boeing and Airbus would be best described as", [
+                "a perfectly competitive market",
+                "a monopolistically competitive market",
+                "an oligopoly",
+                "a monopoly"
+            ], 2, "Boeing và Airbus là thị trường độc quyền tập đoàn."),
+        ];
+
+        // ===== BỘ ĐỀ 6 (50 câu) =====
+        const DE6 = [
+            makeQ("For a certain firm, the 100th unit of output that the firm produces has a marginal revenue of $15 and a marginal cost of $11. It follows that the", [
+                "production of the 100th unit of output increases the firm's profit by $4.",
+                "production of the 100th unit of output increases the firm's average total cost by $11.",
+                "firm's profit-maximizing level of output is less than 100 units.",
+                "production of the 99th unit of output must increase the firm's profit by less than $4."
+            ], 0, "MR – MC = 4."),
+            makeQ("In a perfectly competitive market,", [
+                "no one seller or buyer can influence the price of the product.",
+                "there are only a small number of buyers.",
+                "the goods offered by the different sellers are unique.",
+                "administrative barriers can make it difficult for firms to enter an industry."
+            ], 0, "Không ai có thể ảnh hưởng giá."),
+            makeQ("For a certain firm, the 100th unit of output that the firm produces has a marginal revenue of $15 and a marginal cost of $17. It follows that the", [
+                "production of the 100th unit of output increases the firm's profit by $1.",
+                "production of the 100th unit of output increases the firm's average total cost by $1.",
+                "firm's profit-maximizing level of output is less than 100 units.",
+                "production of the 110th unit of output must increase the firm's profit by less than $1."
+            ], 2, "MR < MC → sản lượng tối ưu nhỏ hơn 100."),
+            makeQ("For a certain firm, the 500th unit of output that the firm produces has a marginal revenue of $20 and a marginal cost of $23. It follows that the", [
+                "production of the 500th unit of output increases the firm's profit by $3.",
+                "production of the 500th unit of output increases the firm's average total cost by $3.",
+                "firm's profit-maximizing level of output is less than 500 units.",
+                "production of the 510th unit of output must increase the firm's profit by less than $3."
+            ], 2, "MR < MC → sản lượng tối ưu nhỏ hơn 500."),
+            makeQ("The income effect encourages the consumer to purchase more of the good, and the substitution effect encourages the consumer to purchase less of the good.", [
+                "When the price of a normal good increases.",
+                "When the price of a normal good decreases.",
+                "When the price of an inferior good decreases.",
+                "When the price of an inferior good increases."
+            ], 3, "Khi giá hàng cấp thấp tăng: thu nhập thực tế giảm → mua ít hơn; hiệu ứng thay thế chuyển sang hàng bình thường."),
+            makeQ("The income effect encourages the consumer to purchase less of the good, and the substitution effect encourages the consumer to purchase more of the good.", [
+                "When the price of a normal good increases.",
+                "When the price of a normal good decreases.",
+                "When the price of an inferior good decreases.",
+                "When the price of an inferior good increases."
+            ], 2, "Khi giá hàng cấp thấp giảm: thu nhập thực tế tăng, nhưng hiệu ứng thay thế khiến tiêu dùng hàng cấp thấp giảm, thay bằng hàng bình thường."),
+            makeQ("Both the income and substitution effects encourage the consumer to purchase more of the good.", [
+                "When the price of a normal good increases.",
+                "When the price of a normal good decreases.",
+                "When the price of an inferior good decreases.",
+                "When the price of an inferior good increases."
+            ], 1, "Giá hàng bình thường giảm → cả hai hiệu ứng đều khuyến khích mua nhiều hơn."),
+            makeQ("Which of the following statements is correct?", [
+                "When the price of a normal good decreases, both the income and substitution effects encourage the consumer to purchase more of the good.",
+                "When the price of a normal good decreases, both the income and substitution effects encourage the consumer more to purchase less of the good.",
+                "When the price of a normal good decreases, the income effect encourages the consumer to purchase more of the good, and the substitution effect encourages the consumer to purchase less of the good.",
+                "When the price of a normal good decreases, the income effect encourages the consumer to purchase less of the good, and the substitution effect encourages the consumer to purchase more of the good."
+            ], 0, "Giá hàng bình thường giảm → cả hai hiệu ứng đều khuyến khích."),
+            makeQ("Market competition exists when (i) Firms are free to set their own prices for their products: (ii) Every buyer is small in relation to the market; (iii) Every seller is small compared to the market.", [
+                "(i) and (ii) only",
+                "(i) and (iii) only",
+                "(ii) and (iii) only",
+                "(i), (ii), and (iii)"
+            ], 2, "Cạnh tranh thị trường: người mua và người bán nhỏ."),
+            makeQ("In a competitive market, any buyer's or seller's actions would", [
+                "have very little effect on the price on the market",
+                "have an impact on the market equilibrium price but not much on the equilibrium quantity",
+                "affect MR and AR but not price",
+                "negatively impact many firms' profits in the market"
+            ], 0, "Hành vi của một người mua/bán không ảnh hưởng đáng kể đến giá."),
+            makeQ("If a consumer is willing and able to pay $30 for a particular good and if he pays $25 for the good, then for that consumer, consumer surplus amounts to", [
+                "$5.",
+                "$55.",
+                "$30.",
+                "$25."
+            ], 0, "CS = 5."),
+            makeQ("Total surplus is equal to", [
+                "Amount received by sellers - Cost to sellers",
+                "Value to buyers - Cost to sellers",
+                "Value to buyers - Amount paid by buyers",
+                "Value to buyers - Amount paid by Sellers"
+            ], 1, "TS = Value to buyers – Cost to sellers."),
+            makeQ("Consumer surplus", [
+                "is equal to the value to buyers - Amount paid by buyers.",
+                "is equal to the amount paid by buyers - Costs of buyers.",
+                "is equal to the value to sellers - Costs of sellers.",
+                "is equal to the value to sellers - Willingness to pay of sellers."
+            ], 0, "CS = Value to buyers – Amount paid."),
+            makeQ("The maximum price that a consumer will pay for a good is called the", [
+                "cost.",
+                "willingness to pay.",
+                "variable cost.",
+                "fixed cost."
+            ], 1, "WTP."),
+            makeQ("Diminishing marginal product affects the shape of the production function in what way?", [
+                "The slope of the production function decreases as the quantity of input increases",
+                "The production function becomes steeper as the quantity of input increases",
+                "The production function slopes downward",
+                "The production function is horizontal beyond a certain quantity of input"
+            ], 0, "Độ dốc hàm sản xuất giảm dần."),
+            makeQ("Assume all capital is owned by firms, rather than by households. Under this assumption, capital is paid according to the value of its marginal product", [
+                "only if this income is transmitted to households in the form of interest",
+                "only if this income is transmitted to households in the form of dividends",
+                "only if this income is transmitted to households in the form of interest or dividends",
+                "regardless of whether this income is transmitted to households in the form of interest or dividends or whether it is kept within firms as retained earnings"
+            ], 3, "Vốn được trả theo VMP."),
+            makeQ("Which of the following statements is correct?", [
+                "The value of the marginal product curve is the labor demand curve for competitive, profit-maximizing firms",
+                "A competitive, profit-maximizing firm hires workers up to the point where the value of the marginal product of labor equals the wage",
+                "By hiring labor up to the point where the value of the marginal product of labor equals the wage, the firm is producing where price equals marginal cost",
+                "All of the above are correct"
+            ], 3, "Tất cả đều đúng."),
+            makeQ("Capital is paid according to the value of its marginal product", [
+                "only if earnings from capital are paid to households in the form of dividends",
+                "regardless of whether earnings from capital are paid to households in the form of dividends or whether those earnings are kept within firms as retained earnings",
+                "only if earnings from capital are kept within firms as retained earnings",
+                "None of the above is correct; unlike labor, capital is a factor of production for which earnings are unrelated to the value of marginal product"
+            ], 1, "Vốn được trả theo VMP."),
+            makeQ("When a monopolist increases the number of units it sells, there are two effects on revenue. They are the", [
+                "demand effect and the supply effect.",
+                "competition effect and the cost effect.",
+                "competitive effect and the monopoly effect.",
+                "output effect and the price effect."
+            ], 3, "Hiệu ứng sản lượng và hiệu ứng giá."),
+            makeQ("Which of the following is a characteristic of a natural monopoly?", [
+                "Average cost exceeds marginal cost over large regions of output.",
+                "Increasing the number of firms increases each firm's average total cost.",
+                "One firm can supply output at a lower cost than two firms.",
+                "All of these are correct"
+            ], 3, "Độc quyền tự nhiên có tất cả các đặc điểm trên."),
+            makeQ("Which of the following statements is correct?", [
+                "Corrective taxes are often preferred over direct regulation because they typically reduce externalities at a lower cost",
+                "Corrective taxes distort economic incentives",
+                "Corrective taxes are often preferred over direct regulation because they typically reduce externalities at a faster rate",
+                "Both a and b are correct"
+            ], 0, "Thuế điều chỉnh chi phí thấp hơn."),
+            makeQ("Suppose that flu shots create a positive externality equal to $8 per shot. Further suppose that the government offers a $11-per-shot subsidy to producers. What is the relationship between the equilibrium quantity and the socially optimal quantity of flu shots produced?", [
+                "They are equal",
+                "The equilibrium quantity is greater than the socially optimal quantity",
+                "The equilibrium quantity is less than the socially optimal quantity",
+                "There is not enough information to answer the question"
+            ], 1, "Trợ cấp 11 > ngoại tác 8 → sản lượng cân bằng lớn hơn tối ưu xã hội."),
+            makeQ("Which of the following statements is correct?", [
+                "If an externality is present in a market, economic efficiency may be enhanced by increased competition.",
+                "If an externality is present in a market, economic efficiency may be enhanced by weakening property rights.",
+                "If an externality is present in a market, economic efficiency may be enhanced by better informed market participants.",
+                "If an externality is present in a market, economic efficiency may be enhanced by government intervention."
+            ], 3, "Chính phủ can thiệp."),
+            makeQ("Which of the following is not a characteristic of monopolistic competition?", [
+                "a large number of sellers",
+                "firms are price takers",
+                "free entry into the market",
+                "a differentiated product"
+            ], 1, "Không phải price takers."),
+            makeQ("Which of the following statements is not correct?", [
+                "Externalities can be corrected by self-interest.",
+                "Externalities can be corrected by moral codes and social sanctions.",
+                "Externalities can be corrected by charity.",
+                "Externalities can be corrected by normal market adjustments."
+            ], 3, "Thị trường tự điều chỉnh không giải quyết được ngoại tác."),
+            makeQ("The primary claim of defenders of advertising is that it", [
+                "conveys information about firm profitability.",
+                "is psychological rather than informational.",
+                "enhances the information available to consumers.",
+                "reduces the elasticity of demand for a firm's product."
+            ], 2, "Quảng cáo cung cấp thông tin cho người tiêu dùng."),
+            makeQ("Product A are currently selling for $20 per unit, but the equilibrium price of product A is $13 per unit. Then,", [
+                "This creates a shortage of product to exist and the market price of that product to increase.",
+                "This creates a shortage of product to exist and the market price of that product to decrease.",
+                "This creates a surplus of product to exist and the market price of that product to increase.",
+                "This creates a surplus of product to exist and the market price of that product to decrease."
+            ], 3, "Dư thừa → giá giảm."),
+            makeQ("Kari downloads 9 songs per month when the price is $1.99 per song and 17 songs per month when the price is $0.99 per song. Kari's behavior demonstrates the law of", [
+                "price.",
+                "supply.",
+                "demand.",
+                "income."
+            ], 2, "Giá giảm → lượng cầu tăng."),
+            makeQ("Among the listed events, which one results in a shift that goes downward and to the left along the supply curve for mangos?", [
+                "There's a reduction in the quantity of mango sellers.",
+                "Technological progress leads to lower mango production costs.",
+                "Mango prices experience a decline.",
+                "The cost of fertilizer, a necessary component in mango production, rises."
+            ], 2, "Giá giảm → di chuyển dọc theo đường cung."),
+            makeQ("When there is a decline in the quantity demanded across all price points, this results in the demand curve being:", [
+                "shift leftward.",
+                "shift rightward.",
+                "move along the demand curve.",
+                "the demand curve has become flatter."
+            ], 0, "Giảm cầu ở mọi mức giá → đường cầu dịch trái."),
+            makeQ("Which of the following statements is correct?", [
+                "The demand curve of a competitive firm is horizontal, same as the demand curve of a monopolist",
+                "The demand curve of a competitive firm is downward sloping, while the demand curve of a monopolist is horizontal.",
+                "The demand curve of a competitive firm is horizontal, while the demand curve of a monopolist is downward sloping.",
+                "The demand curve of a competitive firm is downward sloping, same as the demand curve of a monopolist."
+            ], 2, "Cạnh tranh: đường cầu nằm ngang; độc quyền: dốc xuống."),
+            makeQ("During Christmas holiday season, Vincom retailers often place a high price on merchandise on weekends and discount the price during the week. What do you call this price strategy?", [
+                "oligopoly",
+                "price discrimination",
+                "compensating differential",
+                "marginal cost pricing"
+            ], 1, "Phân biệt giá theo thời gian."),
+            makeQ("Suppose DeBeer owns 80% of the world's diamonds. Which of the following reasons describes a main barrier to entry for the diamond industry?", [
+                "monopoly resources",
+                "government regulation",
+                "the production process",
+                "all of the above are correct"
+            ], 0, "Tài nguyên độc quyền."),
+            makeQ("The ATC curve in the monopoly is", [
+                "falling and MC is above ATC",
+                "falling and MC is below ATC",
+                "rising and MC is below ATC",
+                "Rising and MC is above ATC"
+            ], 1, "Khi ATC giảm, MC nằm dưới ATC."),
+            makeQ("Passenger Type: Adults WTP 18 (70), Children 10 (25), Senior 12 (55). Which option results in the highest profit per day?", [
+                "Charge a single price of $10 to all passengers",
+                "Charge a single price of $12 to all passengers",
+                "Charge a single price of $18 to all passengers",
+                "Continue charging each buyer his/her willingness to pay"
+            ], 3, "Phân biệt giá hoàn hảo cho doanh thu cao nhất."),
+            makeQ("When two goods are perfect substitutes, the marginal rate of substitution", [
+                "is constant along the indifference curve",
+                "decreases as the scarcity of one good increases",
+                "increases as the scarcity of one good increases",
+                "changes to reflect the consumer's changing preferences for the goods"
+            ], 0, "MRS không đổi."),
+            makeQ("Which of the following best describes why indifference curves cannot cross?", [
+                "If indifference curves cross, there are situations where individuals are indifferent between bundles where one bundle contains strictly more of both goods than the other bundle",
+                "If indifference curves cross, individuals are not necessarily consuming along their budget line",
+                "If indifference curves cross, the marginal rate of substitution can be both increasing and decreasing at a specific point",
+                "If indifference curves cross, the goods can be both substitutes and complements"
+            ], 0, "Đường bàng quan cắt nhau vi phạm tính bắc cầu."),
+            makeQ("In the short run, rent control causes the quantity supplied", [
+                "and quantity demanded to fall",
+                "to fall and quantity demanded to rise",
+                "to rise and quantity demanded to fall",
+                "and quantity demanded to rise"
+            ], 1, "Cung giảm, cầu tăng."),
+            makeQ("If the government levies a $500 tax per car on sellers of cars, then the price received by sellers of cars would", [
+                "decrease by exactly $500",
+                "decrease by less than $500",
+                "decrease by more than $500",
+                "increase by an indeterminate amount"
+            ], 1, "Giá nhận của người bán giảm ít hơn 500."),
+            makeQ("If the minimum wage exceeds the equilibrium wage, then", [
+                "the quantity demanded of labor will exceed the quantity supplied",
+                "there will be no unemployment",
+                "the minimum wage will not be binding",
+                "the quantity supplied of labor will exceed the quantity demanded"
+            ], 3, "Lương tối thiểu > lương cân bằng → dư thừa lao động (thất nghiệp)."),
+            makeQ("Suppose that a binding rent control law is repealed in San Francisco. As a result, we would expect the total number of units rented in the city to", [
+                "increase",
+                "decrease",
+                "remain unchanged",
+                "decrease, then increase"
+            ], 0, "Bãi bỏ kiểm soát → số lượng thuê tăng."),
+            makeQ("Bob purchases a book, and his consumer surplus is $3. If Bob is willing to pay $8 for the book, then the price of the book must be", [
+                "$3",
+                "$8",
+                "$5",
+                "$11"
+            ], 2, "Giá = WTP – CS = 5."),
+            makeQ("Producer surplus measures the", [
+                "benefits to sellers of participating in a market",
+                "costs to sellers of participating in a market",
+                "price that buyers are willing to pay for sellers' output of a good or service",
+                "benefit to sellers of producing a greater quantity of a good or service than buyers demand"
+            ], 0, "PS đo lợi ích của người bán khi tham gia thị trường."),
+            makeQ("People oppose to advertising said that advertising", [
+                "creates demand for products that consumers otherwise do not want or need",
+                "lowers barriers to entry into a market because new firms can more easily enter",
+                "increases competition by providing information about prices",
+                "encourages monopoly by raising entry barriers"
+            ], 0, "Quảng cáo tạo nhu cầu không cần thiết."),
+            makeQ("Which of the following conditions is characteristic of a monopolistically competitive firm in short-run?", [
+                "P = AR",
+                "MR = MC",
+                "P > MC",
+                "All of the above are correct"
+            ], 3, "Tất cả đều đúng."),
+            makeQ("If we see many advertising of men's shampoo products, we can conclude that", [
+                "the market for those products is perfectly competitive",
+                "it costs firms very little to produce those products",
+                "those products are highly differentiated",
+                "firms are irrational in their decisions to advertise"
+            ], 2, "Quảng cáo nhiều → sản phẩm khác biệt hóa cao."),
+            makeQ("The commercial airline industry consisting of Boeing and Airbus would be best described as", [
+                "a perfectly competitive market",
+                "a monopolistically competitive market",
+                "an oligopoly",
+                "a monopoly"
+            ], 2, "Boeing và Airbus là độc quyền tập đoàn."),
+            makeQ("Which of the following correctly lists the products in an order from most advertised to least advertised?", [
+                "soft drinks, breakfast cereals, dog food",
+                "corn, dog food, communication satellites",
+                "dog food, communication satellites, corn",
+                "wheat, corn, crude oil"
+            ], 0, "Sản phẩm khác biệt hóa cao quảng cáo nhiều hơn."),
+        ];
+
+        // ===== BỘ ĐỀ 7 (50 câu) =====
+        const DE7 = [
+            makeQ("The supply curve in a perfectly competitive market is", [
+                "equal to the industry profits.",
+                "the horizontal sum of all the individual firms' supply curves.",
+                "the vertical sum of all the individual firms' supply curves.",
+                "always a horizontal line."
+            ], 1, "Đường cung thị trường là tổng theo chiều ngang của các đường cung cá nhân."),
+            makeQ("In the short run for a particular market, there are 200 firms. Each firm has a marginal cost of $15 when it produces 100 units of output. One point on the perfect competition market supply curve is", [
+                "quantity = 100, price = $15.",
+                "quantity = 200, price = $15.",
+                "quantity = 20,000, price = $15.",
+                "quantity = 20,000, price = $7,500."
+            ], 2, "200 × 100 = 20,000, MC = 15."),
+            makeQ("Which of the following statements is correct?", [
+                "Economists represent a consumer's preferences using demand curves.",
+                "Economists represent a consumer's preferences using budget constraints.",
+                "Economists represent a consumer's preferences using indifference curves.",
+                "Economists represent a consumer's preferences using supply curves."
+            ], 2, "Đường bàng quan biểu diễn sở thích."),
+            makeQ("Which of the following statements is not correct?", [
+                "A consumer chooses an optimal consumption point where the marginal rate of substitution equals the relative price ratio.",
+                "A consumer chooses an optimal consumption point where the slope of the indifference curve equals the slope of the budget constraint.",
+                "A consumer chooses an optimal consumption point where the ratio of the marginal utilities equals the ratio of the prices.",
+                "A consumer chooses an optimal consumption point where the marginal rate of substitution is maximized."
+            ], 3, "MRS không được tối đa hóa, mà bằng tỷ lệ giá."),
+            makeQ("Which of the following statements is correct?", [
+                "When a consumer experiences a price increase for an inferior good, it is possible that the income effect is greater than the substitution effect, and the demand curve will be downward sloping.",
+                "When a consumer experiences a price increase for an inferior good, it is possible that the income effect is greater than the substitution effect, and the demand curve will be upward sloping.",
+                "When a consumer experiences a price increase for an inferior good, it is possible that the income effect is less than the substitution effect, and the demand curve will be upward sloping.",
+                "When a consumer experiences a price increase for an inferior good, it is possible that the income effect is less than the substitution effect but that the substitution effect is positive, and the demand curve will be upward sloping."
+            ], 1, "Giá hàng cấp thấp tăng, hiệu ứng thu nhập lớn hơn thay thế → đường cầu dốc lên."),
+            makeQ("The income effect encourages the consumer to purchase less of the good, and the substitution effect encourages the consumer to purchase more of the good.", [
+                "When the price of a normal good increases.",
+                "When the price of a normal good decreases.",
+                "When the price of an inferior good decreases.",
+                "When the price of an inferior good increases."
+            ], 2, "Giá hàng cấp thấp giảm: hiệu ứng thu nhập và thay thế ngược chiều."),
+            makeQ("Dan and Silina each like jewelry and music by the Black pink. If we were to graph an indifference curve with jewelry on the horizontal axis and cd's by the Black pink on the vertical axis, then", [
+                "Dan and Silina would have identical indifference curves.",
+                "Dan's indifference curve would be higher than Silina's indifference curve.",
+                "Silina's indifference curve would be higher than Dan's indifference curve.",
+                "Because we do not know the intensity of each woman's preferences, we do not have enough information to compare their indifference curves."
+            ], 3, "Không biết mức độ ưa thích."),
+            makeQ("Market competition exists when (i) Firms are free to set their own prices for their products: (ii) Every buyer is small in relation to the market; (iii) Every seller is small compared to the market.", [
+                "(i) and (ii) only",
+                "(i) and (iii) only",
+                "(ii) and (iii) only",
+                "(i), (ii), and (iii)"
+            ], 2, "Người mua và bán nhỏ."),
+            makeQ("Farmer John sell wheat to a retailer in his hometown. If the wheat market is a competitive market, Mr. John will optimize his profit by choosing one of the following:", [
+                "To produce the quantity at which AVC is minimized",
+                "To produce the quantity at which AFC is minimized",
+                "To produce the quantity at which market price is equal to Mr. John's marginal cost of production",
+                "To produce at the quantity at which market price exceeds Mr. John's marginal cost of production"
+            ], 2, "P = MC."),
+            makeQ("Which of the following statements best describe a price-taking firm?", [
+                "If the firm raise its prices over the market rate, it would fail to sell any of its products",
+                "In order to increase revenue, the firm is incentivized to lower prices than the market rate",
+                "Only a certain quantity of the product can be sold by the firm at the market price before the market price will fall",
+                "Price-taking firms maximize profits by charging a price above MC"
+            ], 0, "Tăng giá → không bán được."),
+            makeQ("Which of the following does not describe a market that is competitive?", [
+                "Buyers and sellers are price takers",
+                "Every firm sells a nearly same product",
+                "Entry is difficult",
+                "Each firm chooses an output level that maximizes profits"
+            ], 2, "Gia nhập khó không phải cạnh tranh hoàn hảo."),
+        ];
+
+        // Bổ sung câu hỏi để đủ 50 câu cho bộ 7 (hiện có 41 câu), thêm 9 câu từ các bộ trước (lặp lại)
+        const extraQuestions = [
+            makeQ("What is the difference between positive and normative statements?", [
+                "Positive statements are based on opinions, normative statements are facts",
+                "Positive statements describe the world as it is, normative statements prescribe how the world should be",
+                "Both are opinions",
+                "There is no difference"
+            ], 1, "Positive: mô tả thực tế; Normative: nên thế nào."),
+            makeQ("Economic growth shifts the Production Possibilities Frontier PPF:", [
+                "Inward",
+                "Outward",
+                "Does not shift",
+                "Downward"
+            ], 1, "Tăng trưởng kinh tế dịch PPF ra ngoài."),
+            makeQ("Which of the following would cause a decrease in the supply of a good?", [
+                "A decrease in the number of sellers.",
+                "A technological advancement in the production process.",
+                "A decrease in the cost of production inputs.",
+                "An increase in the price of the good."
+            ], 0, "Số lượng người bán giảm → cung giảm."),
+            makeQ("If the price of coffee increases, what happens in the market for tea, assuming they are substitutes?", [
+                "Demand for tea decreases",
+                "Demand for tea increases",
+                "Supply of tea increases",
+                "Quantity demanded for tea decreases"
+            ], 1, "Cà phê và trà là hàng thay thế, giá cà phê tăng → cầu trà tăng."),
+            makeQ("What would happen to the equilibrium price and quantity in the market for electric cars if both supply and demand increase?", [
+                "Price falls, quantity rises",
+                "Price is uncertain, quantity rises",
+                "Price rises, quantity falls",
+                "Both price and quantity fall"
+            ], 1, "Cả cung và cầu tăng → lượng tăng, giá không xác định."),
+            makeQ("If the price of a complement good decreases, what is the expected effect on the demand for the related good?", [
+                "The demand for the related good increases.",
+                "The demand for the related good decreases.",
+                "The quantity demanded of the related good decreases, but the demand remains the same.",
+                "The demand for the related good becomes perfectly inelastic."
+            ], 0, "Giá hàng bổ sung giảm → cầu hàng liên quan tăng."),
+            makeQ("An example of a binding price floor is:", [
+                "Minimum wage set below market wage",
+                "Minimum wage set above market wage",
+                "Rent control",
+                "Sales tax"
+            ], 1, "Giá sàn ràng buộc khi lương tối thiểu cao hơn lương thị trường."),
+            makeQ("A subsidy to producers generally has what effect on the market?", [
+                "It increases the quantity supplied and lowers the market price.",
+                "It decreases the quantity supplied.",
+                "It shifts the supply curve to the left.",
+                "It has no effect on the market equilibrium."
+            ], 0, "Trợ cấp → cung tăng → giá giảm."),
+            makeQ("The height of the demand curve shows:", [
+                "The price producers receive",
+                "The cost of producing a good",
+                "The value buyers place on a good",
+                "Total market surplus"
+            ], 2, "Đường cầu thể hiện giá trị người mua đánh giá hàng hóa."),
+        ];
+
+        // Gộp DE7 với các câu bổ sung
+        DE7.push(...extraQuestions);
+
+        // ================================================================
+        // GỘP 7 BỘ ĐỀ
+        // ================================================================
+        const SETS = [DE1, DE2, DE3, DE4, DE5, DE6, DE7];
+
+        // ================================================================
+        // APP STATE
+        // ================================================================
+        const state = {
+            mode: 'learn',
+            setIdx: 0,
+            qIdx: 0,
+            answers: Array(50).fill(null),
+            explained: Array(50).fill(false),
+            submitted: false,
+            timerInterval: null,
+            seconds: 0,
+            examStarted: false,
+            examPaused: false,
+        };
+
+        // ================================================================
+        // DOM REFS
+        // ================================================================
+        const $ = id => document.getElementById(id);
+        const setList = $('setList');
+        const questionMeta = $('questionMeta');
+        const questionText = $('questionText');
+        const optionsCont = $('optionsContainer');
+        const explanBox = $('explanationBox');
+        const counterLabel = $('counterLabel');
+        const answeredLabel = $('answeredLabel');
+        const progressFill = $('progressFill');
+        const progressBar = $('progressBar');
+        const timerBadge = $('timerBadge');
+        const timerText = $('timerText');
+        const prevBtn = $('prevBtn');
+        const nextBtn = $('nextBtn');
+        const resultBox = $('resultBox');
+        const scoreText = $('scoreText');
+        const detailText = $('detailText');
+        const correctCount = $('correctCount');
+        const timeSpent = $('timeSpent');
+        const starsDisplay = $('starsDisplay');
+        const reviewBtn = $('reviewBtn');
+        const retryBtn = $('retryBtn');
+        const modeLearn = $('modeLearn');
+        const modeExam = $('modeExam');
+
+        // ================================================================
+        // RENDER FUNCTIONS
+        // ================================================================
+        function renderSets() {
+            setList.innerHTML = '';
+            SETS.forEach((_, i) => {
+                const btn = document.createElement('button');
+                btn.className = 'set-btn' + (i === state.setIdx ? ' active' : '');
+                btn.textContent = `Bộ ${i+1}`;
+                btn.setAttribute('role', 'listitem');
+                btn.setAttribute('aria-pressed', i === state.setIdx ? 'true' : 'false');
+                btn.addEventListener('click', () => switchSet(i));
+                setList.appendChild(btn);
+            });
+        }
+
+        async function switchSet(i) {
+            if (state.mode === 'exam' && state.examStarted && !state.submitted) {
+                const confirmed = await confirmModal.show({
+                    title: '⚠️ Đổi bộ đề',
+                    desc: 'Việc đổi bộ đề sẽ làm <strong>mất tiến trình kiểm tra</strong> hiện tại. Bạn có chắc chắn muốn tiếp tục?',
+                    icon: '🔄',
+                    okText: 'Tiếp tục',
+                    cancelText: 'Hủy',
+                    type: 'danger'
+                });
+                if (!confirmed) return;
+                resetExamState();
+            }
+            state.setIdx = i;
+            state.answers = Array(50).fill(null);
+            state.explained = Array(50).fill(false);
+            state.qIdx = 0;
+            renderSets();
+            renderQuestion();
+        }
+
+        function getQ() { return SETS[state.setIdx][state.qIdx]; }
+
+        function renderQuestion() {
+            const q = getQ();
+            const letters = ['A', 'B', 'C', 'D', 'E'];
+
+            questionMeta.textContent = TOPIC_LABELS[q.t] || 'Kinh tế vi mô';
+            questionText.textContent = `${state.qIdx+1}. ${q.q}`;
+
+            const pct = Math.max(2, Math.round(((state.qIdx + 1) / 50) * 100));
+            progressFill.style.width = pct + '%';
+            progressBar.setAttribute('aria-valuenow', state.qIdx + 1);
+            counterLabel.textContent = `Câu ${state.qIdx+1} / 50`;
+            const answered = state.answers.filter(a => a !== null && a.length > 0).length;
+            answeredLabel.textContent = `${answered} đã trả lời`;
+
+            optionsCont.innerHTML = '';
+            const sel = state.answers[state.qIdx] || [];
+            const showAnswer = (state.mode === 'learn' && state.explained[state.qIdx]) ||
+                (state.mode === 'exam' && state.submitted);
+
+            q.opts.forEach((opt, i) => {
+                const btn = document.createElement('button');
+                btn.className = 'option' + (q.multi ? ' multi' : '');
+                btn.setAttribute('role', 'listitem');
+                btn.setAttribute('aria-label', `Đáp án ${letters[i]}: ${opt}`);
+                if (showAnswer || (state.mode === 'learn' && state.explained[state.qIdx])) {
+                    btn.classList.add('disabled');
+                }
+                if (sel.includes(i)) btn.classList.add('selected');
+
+                if (showAnswer) {
+                    if (q.ans.includes(i)) btn.classList.add('correct');
+                    else if (sel.includes(i)) btn.classList.add('wrong');
+                }
+
+                const letter = document.createElement('span');
+                letter.className = 'option__letter';
+                letter.textContent = letters[i];
+                letter.setAttribute('aria-hidden', 'true');
+
+                const text = document.createElement('span');
+                text.className = 'option__text';
+                text.textContent = opt;
+
+                const icon = document.createElement('span');
+                icon.className = 'option__icon';
+                icon.setAttribute('aria-hidden', 'true');
+                if (showAnswer) {
+                    icon.textContent = q.ans.includes(i) ? '✓' : (sel.includes(i) ? '✗' : '');
+                } else if (sel.includes(i)) {
+                    icon.textContent = q.multi ? '☑' : '◉';
+                }
+
+                btn.append(letter, text, icon);
+                btn.addEventListener('click', () => onSelect(i));
+                optionsCont.appendChild(btn);
+            });
+
+            if (showAnswer) {
+                const isCorrect = JSON.stringify(sel.sort()) === JSON.stringify(q.ans.sort());
+                const corr = q.ans.map(i => q.opts[i]).join(', ');
+                const userAns = sel.length > 0 ? sel.map(i => q.opts[i]).join(', ') : 'Chưa chọn';
+                explanBox.innerHTML =
+                    `<strong>${isCorrect?'✅ Đúng':'❌ Sai'}</strong> · Đáp án đúng: <strong>${corr}</strong><br><br>${q.exp}`;
+                explanBox.classList.add('show');
+            } else {
+                explanBox.classList.remove('show');
+            }
+
+            prevBtn.disabled = state.qIdx === 0;
+            const isLast = state.qIdx === 49;
+            if (state.mode === 'learn') {
+                nextBtn.textContent = isLast ? '🏁 Hoàn thành' : 'Tiếp →';
+                nextBtn.className = 'btn btn--primary';
+            } else if (!state.submitted) {
+                nextBtn.textContent = isLast ? '📨 Nộp bài' : 'Tiếp →';
+                nextBtn.className = isLast ? 'btn btn--success' : 'btn btn--primary';
+            } else {
+                nextBtn.textContent = isLast ? '—' : 'Tiếp →';
+                nextBtn.className = 'btn btn--primary';
+                nextBtn.disabled = isLast;
+            }
+
+            updateTimerDisplay();
+        }
+
+        function onSelect(idx) {
+            const q = getQ();
+            if (state.submitted) return;
+            if (state.mode === 'learn' && state.explained[state.qIdx]) return;
+
+            let sel = state.answers[state.qIdx] || [];
+            if (q.multi) {
+                if (sel.includes(idx)) {
+                    sel = sel.filter(i => i !== idx);
+                } else {
+                    sel.push(idx);
+                    sel.sort();
+                }
+            } else {
+                sel = [idx];
+            }
+            state.answers[state.qIdx] = sel;
+            if (state.mode === 'learn') { state.explained[state.qIdx] = true; }
+            renderQuestion();
+        }
+
+        // ================================================================
+        // NAVIGATION
+        // ================================================================
+        function goPrev() { if (state.qIdx > 0) { state.qIdx--;
+                renderQuestion(); } }
+
+        function goNext() {
+            if (state.mode === 'exam' && !state.submitted && state.qIdx === 49) { submitExam(); return; }
+            if (state.qIdx < 49) { state.qIdx++;
+                renderQuestion(); } else if (state.mode === 'learn') alert('🎉 Bạn đã hoàn thành bộ đề này!');
+        }
+
+        // ================================================================
+        // TIMER
+        // ================================================================
+        function startTimer() {
+            if (state.timerInterval) return;
+            state.examStarted = true;
+            state.examPaused = false;
+            state.timerInterval = setInterval(() => {
+                state.seconds++;
+                updateTimerDisplay();
+            }, 1000);
+        }
+
+        function stopTimer() {
+            clearInterval(state.timerInterval);
+            state.timerInterval = null;
+        }
+
+        function fmtTime(s) { const m = Math.floor(s / 60),
+                ss = s % 60; return `${String(m).padStart(2,'0')}:${String(ss).padStart(2,'0')}`; }
+
+        function updateTimerDisplay() {
+            if (state.examPaused) {
+                timerBadge.className = 'timer-badge paused';
+                timerText.textContent = fmtTime(state.seconds) + ' ⏸';
+            } else if (state.seconds > 0) {
+                timerBadge.className = 'timer-badge' + (state.seconds >= 2700 ? ' warning' : '');
+                timerText.textContent = fmtTime(state.seconds);
+            } else {
+                timerBadge.className = 'timer-badge';
+                timerText.textContent = '--:--';
+            }
+        }
+
+        // ================================================================
+        // SUBMIT EXAM
+        // ================================================================
+        async function submitExam() {
+            if (state.submitted || state.mode !== 'exam') return;
+            const unanswered = state.answers.filter(a => a === null || a.length === 0).length;
+            if (unanswered > 0) {
+                const confirmed = await confirmModal.show({
+                    title: '⚠️ Còn câu chưa trả lời',
+                    desc: `Bạn còn <strong>${unanswered}</strong> câu chưa trả lời. Bạn vẫn muốn nộp bài?`,
+                    icon: '📝',
+                    okText: 'Vẫn nộp',
+                    cancelText: 'Làm tiếp',
+                    type: 'danger'
+                });
+                if (!confirmed) return;
+            }
+            stopTimer();
+            state.submitted = true;
+            state.examPaused = false;
+            const qs = SETS[state.setIdx];
+            let correct = 0;
+            state.answers.forEach((a, i) => {
+                const userAns = a || [];
+                const qAns = qs[i].ans || [];
+                if (JSON.stringify(userAns.sort()) === JSON.stringify(qAns.sort())) correct++;
+            });
+            const timeStr = fmtTime(state.seconds);
+            timeSpent.textContent = timeStr;
+            correctCount.textContent = correct;
+            scoreText.innerHTML = `${correct}<span>/50</span>`;
+            detailText.innerHTML = `Thời gian: <strong>${timeStr}</strong> · Đúng <strong>${correct}</strong> câu`;
+            const pct = correct / 50;
+            starsDisplay.textContent = pct >= .9 ? '🌟🌟🌟🌟🌟' : pct >= .7 ? '🌟🌟🌟🌟' : pct >= .5 ? '🌟🌟🌟' : pct >= .3 ?
+                '🌟🌟' : '🌟';
+            resultBox.classList.add('show');
+            resultBox.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+            renderQuestion();
+        }
+
+        // ================================================================
+        // MODE SWITCH
+        // ================================================================
+        function resetExamState() {
+            stopTimer();
+            state.submitted = false;
+            state.examStarted = false;
+            state.examPaused = false;
+            state.answers = Array(50).fill(null);
+            state.explained = Array(50).fill(false);
+            state.qIdx = 0;
+            state.seconds = 0;
+            timerText.textContent = '--:--';
+            timerBadge.className = 'timer-badge';
+            resultBox.classList.remove('show');
+            nextBtn.disabled = false;
+        }
+
+        async function setMode(mode) {
+            if (state.mode === mode) return;
+
+            if (state.mode === 'exam' && mode === 'learn') {
+                if (state.examStarted && !state.submitted) {
+                    const confirmed = await confirmModal.show({
+                        title: '⏸️ Tạm dừng bài thi',
+                        desc: 'Chuyển sang chế độ Học sẽ <strong>tạm dừng</strong> bài thi của bạn. Bạn có thể tiếp tục sau.',
+                        icon: '⏸️',
+                        okText: 'Tạm dừng',
+                        cancelText: 'Ở lại',
+                        type: 'success'
+                    });
+                    if (!confirmed) return;
+                    stopTimer();
+                    state.examPaused = true;
+                    state.answers.forEach((ans, idx) => {
+                        if (ans !== null && ans.length > 0) state.explained[idx] = true;
+                    });
+                } else {
+                    resetExamState();
+                }
+                state.mode = mode;
+                modeLearn.classList.toggle('active', true);
+                modeLearn.setAttribute('aria-pressed', 'true');
+                modeExam.classList.toggle('active', false);
+                modeExam.setAttribute('aria-pressed', 'false');
+                updateTimerDisplay();
+                renderQuestion();
+                return;
+            }
+
+            if (state.mode === 'learn' && mode === 'exam') {
+                if (state.examPaused) {
+                    state.mode = mode;
+                    modeLearn.classList.toggle('active', false);
+                    modeLearn.setAttribute('aria-pressed', 'false');
+                    modeExam.classList.toggle('active', true);
+                    modeExam.setAttribute('aria-pressed', 'true');
+                    updateTimerDisplay();
+                    startTimer();
+                    renderQuestion();
+                    return;
+                } else {
+                    resetExamState();
+                    state.mode = mode;
+                    modeLearn.classList.toggle('active', false);
+                    modeLearn.setAttribute('aria-pressed', 'false');
+                    modeExam.classList.toggle('active', true);
+                    modeExam.setAttribute('aria-pressed', 'true');
+                    startTimer();
+                    renderQuestion();
+                    return;
+                }
+            }
+        }
+
+        // ================================================================
+        // EVENT LISTENERS
+        // ================================================================
+        prevBtn.addEventListener('click', goPrev);
+        nextBtn.addEventListener('click', goNext);
+        modeLearn.addEventListener('click', () => setMode('learn'));
+        modeExam.addEventListener('click', () => setMode('exam'));
+        reviewBtn.addEventListener('click', () => {
+            state.qIdx = 0;
+            renderQuestion();
+            resultBox.classList.remove('show');
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+        retryBtn.addEventListener('click', () => {
+            resetExamState();
+            if (state.mode === 'exam') startTimer();
+            renderQuestion();
+        });
+
+        document.addEventListener('keydown', e => {
+            if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA') return;
+            if (e.key === 'ArrowLeft') goPrev();
+            if (e.key === 'ArrowRight') goNext();
+            if (['1', '2', '3', '4'].includes(e.key)) {
+                const idx = parseInt(e.key) - 1;
+                const opts = document.querySelectorAll('.option');
+                if (opts[idx]) opts[idx].click();
+            }
+        });
+
+        // ================================================================
+        // INIT
+        // ================================================================
+        function init() {
+            renderSets();
+            renderQuestion();
+        }
+        init();
+    </script>
+</body>
+</html>
